@@ -1,6 +1,11 @@
 # Pokémon Concepts Vector Archive
 
+[![GitHub Pages](https://img.shields.io/badge/Live%20Demo-GitHub%20Pages-blue?style=flat-square&logo=github)](https://thebeanboard.github.io/pocketmonster-concepts/)
+[![Vectors](https://img.shields.io/badge/Vectors-126%20SVGs-green?style=flat-square)](https://thebeanboard.github.io/pocketmonster-concepts/)
+
 A complete, high-fidelity vector restoration of all 42 original hand-drawn Pokémon concepts from the scan archive (`Pokémon Concepts Scan Jun 23, 2020 at 7.16 PM.pdf`).
+
+**Live Archive Gallery:** [https://thebeanboard.github.io/pocketmonster-concepts/](https://thebeanboard.github.io/pocketmonster-concepts/)
 
 ## Repository Structure
 
