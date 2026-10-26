@@ -3,33 +3,154 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Pokémon Concepts • Vector Archive</title>
+  <title>Pocket Monster Concepts • The Bean Board Vector Archive</title>
+  <meta name="description" content="52 authentic hand-drawn Pokémon sketchbook concepts and homemade cards restored as clean vector SVGs.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2350b450'/%3E%3Ctext x='32' y='42' font-family='monospace' font-size='26' font-weight='700' text-anchor='middle' fill='%23f4ecdc'%3EBB%3C/text%3E%3C/svg%3E">
+  <script>
+    (function () {
+      try {
+        var t = localStorage.getItem('beanboard-theme');
+        if (t) document.documentElement.setAttribute('data-theme', t);
+      } catch (e) {}
+    })();
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
   <style>
+    /* Theme tokens matching The Bean Board */
     :root {
-      --bg: #0b0f19;
-      --card-bg: #161f30;
-      --text: #f1f5f9;
-      --muted: #94a3b8;
-      --accent: #38bdf8;
-      --border: #23354d;
-      --font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      color-scheme: dark;
+      --bg: #0f0d0a;
+      --header-bg: rgba(22, 18, 14, 0.88);
+      --card-bg: rgba(30, 25, 19, 0.75);
+      --card-border: rgba(220, 180, 140, 0.14);
+      --card-border-hover: rgba(111, 211, 90, 0.55);
+      --card-footer-bg: rgba(22, 18, 14, 0.95);
+      --text: #f4ecdc;
+      --muted: #b8a68f;
+      --accent: #6fd35a;
+      --accent-soft: rgba(100, 200, 80, 0.13);
+      --glow-a: rgba(100, 200, 80, 0.10);
+      --glow-b: rgba(200, 140, 100, 0.08);
+      --border: rgba(220, 180, 140, 0.14);
+      --control-bg: rgba(40, 32, 24, 0.7);
+      --control-border: rgba(220, 180, 140, 0.18);
+      --preview-dark-bg: #0b0907;
+      --modal-bg: #1a1511;
+      --modal-info-bg: #15110d;
+      --modal-backdrop: rgba(10, 8, 6, 0.85);
+      --logo-gradient: linear-gradient(135deg, #f4ecdc 0%, #dcb48c 100%);
+      --accent-gradient: linear-gradient(135deg, #8cf064 0%, #50b450 55%, #286428 100%);
+      --btn-text: #0f0d0a;
     }
+    @media (prefers-color-scheme: light) {
+      :root:not([data-theme="dark"]) {
+        color-scheme: light;
+        --bg: #f6f1e7;
+        --header-bg: rgba(246, 241, 231, 0.92);
+        --card-bg: rgba(255, 252, 246, 0.92);
+        --card-border: rgba(140, 80, 60, 0.16);
+        --card-border-hover: rgba(47, 138, 42, 0.55);
+        --card-footer-bg: rgba(245, 239, 228, 0.95);
+        --text: #2a1d12;
+        --muted: #6b5a48;
+        --accent: #2f8a2a;
+        --accent-soft: rgba(60, 140, 60, 0.12);
+        --glow-a: rgba(100, 200, 80, 0.08);
+        --glow-b: rgba(200, 140, 100, 0.08);
+        --border: rgba(140, 80, 60, 0.16);
+        --control-bg: rgba(235, 226, 212, 0.85);
+        --control-border: rgba(140, 80, 60, 0.2);
+        --preview-dark-bg: #1f1b16;
+        --modal-bg: #fcf9f2;
+        --modal-info-bg: #f4ecdc;
+        --modal-backdrop: rgba(42, 29, 18, 0.6);
+        --logo-gradient: linear-gradient(135deg, #3a2414 0%, #8c503c 100%);
+        --accent-gradient: linear-gradient(135deg, #2f8a2a 0%, #1e5a1b 100%);
+        --btn-text: #f4ecdc;
+      }
+    }
+    :root[data-theme="light"] {
+      color-scheme: light;
+      --bg: #f6f1e7;
+      --header-bg: rgba(246, 241, 231, 0.92);
+      --card-bg: rgba(255, 252, 246, 0.92);
+      --card-border: rgba(140, 80, 60, 0.16);
+      --card-border-hover: rgba(47, 138, 42, 0.55);
+      --card-footer-bg: rgba(245, 239, 228, 0.95);
+      --text: #2a1d12;
+      --muted: #6b5a48;
+      --accent: #2f8a2a;
+      --accent-soft: rgba(60, 140, 60, 0.12);
+      --glow-a: rgba(100, 200, 80, 0.08);
+      --glow-b: rgba(200, 140, 100, 0.08);
+      --border: rgba(140, 80, 60, 0.16);
+      --control-bg: rgba(235, 226, 212, 0.85);
+      --control-border: rgba(140, 80, 60, 0.2);
+      --preview-dark-bg: #1f1b16;
+      --modal-bg: #fcf9f2;
+      --modal-info-bg: #f4ecdc;
+      --modal-backdrop: rgba(42, 29, 18, 0.6);
+      --logo-gradient: linear-gradient(135deg, #3a2414 0%, #8c503c 100%);
+      --accent-gradient: linear-gradient(135deg, #2f8a2a 0%, #1e5a1b 100%);
+      --btn-text: #f4ecdc;
+    }
+    :root[data-theme="dark"] {
+      color-scheme: dark;
+      --bg: #0f0d0a;
+      --header-bg: rgba(22, 18, 14, 0.88);
+      --card-bg: rgba(30, 25, 19, 0.75);
+      --card-border: rgba(220, 180, 140, 0.14);
+      --card-border-hover: rgba(111, 211, 90, 0.55);
+      --card-footer-bg: rgba(22, 18, 14, 0.95);
+      --text: #f4ecdc;
+      --muted: #b8a68f;
+      --accent: #6fd35a;
+      --accent-soft: rgba(100, 200, 80, 0.13);
+      --glow-a: rgba(100, 200, 80, 0.10);
+      --glow-b: rgba(200, 140, 100, 0.08);
+      --border: rgba(220, 180, 140, 0.14);
+      --control-bg: rgba(40, 32, 24, 0.7);
+      --control-border: rgba(220, 180, 140, 0.18);
+      --preview-dark-bg: #0b0907;
+      --modal-bg: #1a1511;
+      --modal-info-bg: #15110d;
+      --modal-backdrop: rgba(10, 8, 6, 0.85);
+      --logo-gradient: linear-gradient(135deg, #f4ecdc 0%, #dcb48c 100%);
+      --accent-gradient: linear-gradient(135deg, #8cf064 0%, #50b450 55%, #286428 100%);
+      --btn-text: #0f0d0a;
+    }
+
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body {
       background-color: var(--bg);
       color: var(--text);
-      font-family: var(--font);
+      font-family: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
       line-height: 1.5;
-      padding-bottom: 80px;
+      padding-bottom: 60px;
+      position: relative;
+      min-height: 100vh;
     }
+    .glow-bg {
+      position: fixed;
+      inset: 0;
+      background:
+        radial-gradient(circle at 25% 15%, var(--glow-a) 0%, transparent 45%),
+        radial-gradient(circle at 80% 85%, var(--glow-b) 0%, transparent 45%);
+      pointer-events: none;
+      z-index: 0;
+    }
+
     header {
-      background: linear-gradient(180deg, rgba(30, 41, 59, 0.8) 0%, rgba(11, 15, 25, 0.95) 100%);
-      backdrop-filter: blur(12px);
+      background: var(--header-bg);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
       border-bottom: 1px solid var(--border);
       position: sticky;
       top: 0;
       z-index: 100;
-      padding: 20px 32px;
+      padding: 18px 32px;
     }
     .header-content {
       max-width: 1400px;
@@ -40,19 +161,54 @@
       align-items: center;
       gap: 16px;
     }
-    .brand h1 {
+    .brand-group {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+    .brand-back {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--accent);
+      text-decoration: none;
+      transition: opacity 0.2s;
+    }
+    .brand-back:hover {
+      opacity: 0.8;
+    }
+    .brand-title-wrap {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .brand-title-wrap h1 {
       font-size: 24px;
       font-weight: 800;
-      letter-spacing: -0.5px;
-      background: linear-gradient(90deg, #38bdf8, #818cf8, #f472b6);
+      letter-spacing: -0.02em;
+      background: var(--logo-gradient);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
     }
-    .brand p {
+    .brand-badge {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      padding: 2px 8px;
+      border-radius: 999px;
+      background: var(--accent-soft);
+      color: var(--accent);
+      border: 1px solid var(--accent);
+    }
+    .brand-group p {
       font-size: 13px;
       color: var(--muted);
-      margin-top: 2px;
     }
+
     .controls {
       display: flex;
       flex-wrap: wrap;
@@ -63,9 +219,10 @@
       position: relative;
     }
     .search-box input {
-      background: #1e293b;
-      border: 1px solid var(--border);
+      background: var(--control-bg);
+      border: 1px solid var(--control-border);
       color: var(--text);
+      font-family: inherit;
       padding: 8px 16px 8px 36px;
       border-radius: 999px;
       font-size: 14px;
@@ -88,15 +245,16 @@
     }
     .mode-toggle {
       display: flex;
-      background: #1e293b;
+      background: var(--control-bg);
       border-radius: 999px;
       padding: 3px;
-      border: 1px solid var(--border);
+      border: 1px solid var(--control-border);
     }
     .mode-btn {
       background: transparent;
       border: none;
       color: var(--muted);
+      font-family: inherit;
       padding: 6px 14px;
       font-size: 13px;
       font-weight: 600;
@@ -106,8 +264,27 @@
     }
     .mode-btn.active {
       background: var(--accent);
-      color: #0b0f19;
+      color: var(--btn-text);
     }
+
+    .theme-toggle-btn {
+      background: var(--control-bg);
+      border: 1px solid var(--control-border);
+      color: var(--muted);
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      cursor: pointer;
+      display: grid;
+      place-items: center;
+      font-size: 16px;
+      transition: color 0.2s, border-color 0.2s;
+    }
+    .theme-toggle-btn:hover {
+      color: var(--text);
+      border-color: var(--accent);
+    }
+
     .filter-bar {
       max-width: 1400px;
       margin: 16px auto 0;
@@ -116,11 +293,14 @@
       gap: 8px;
       overflow-x: auto;
       padding-bottom: 8px;
+      position: relative;
+      z-index: 1;
     }
     .filter-pill {
-      background: #1e293b;
-      border: 1px solid var(--border);
+      background: var(--control-bg);
+      border: 1px solid var(--control-border);
       color: var(--muted);
+      font-family: inherit;
       font-size: 12px;
       font-weight: 600;
       padding: 5px 12px;
@@ -130,17 +310,21 @@
       transition: all 0.2s;
     }
     .filter-pill:hover, .filter-pill.active {
-      background: #334155;
+      background: var(--accent-soft);
       color: var(--text);
       border-color: var(--accent);
     }
+
     .main-container {
       max-width: 1400px;
-      margin: 24px auto 0;
+      margin: 20px auto 0;
       padding: 0 32px;
+      position: relative;
+      z-index: 1;
     }
     .stats-info {
-      font-size: 13px;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 12px;
       color: var(--muted);
       margin-bottom: 20px;
       display: flex;
@@ -149,27 +333,29 @@
     .grid {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-      gap: 24px;
+      gap: 22px;
     }
     .card {
       background: var(--card-bg);
-      border: 1px solid var(--border);
-      border-radius: 16px;
+      border: 1px solid var(--card-border);
+      border-radius: 18px;
       overflow: hidden;
       cursor: pointer;
-      transition: all 0.25s cubic-bezier(0.2, 0, 0, 1);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      transition: transform 0.25s cubic-bezier(0.2, 0, 0, 1), border-color 0.25s, box-shadow 0.25s;
       display: flex;
       flex-direction: column;
     }
     .card:hover {
       transform: translateY(-4px);
-      border-color: var(--accent);
-      box-shadow: 0 12px 28px rgba(0,0,0,0.4);
+      border-color: var(--card-border-hover);
+      box-shadow: 0 12px 32px rgba(0,0,0,0.35);
     }
     .card-preview {
       width: 100%;
       aspect-ratio: 600 / 850;
-      background: #0f172a;
+      background: var(--preview-dark-bg);
       display: flex;
       align-items: center;
       justify-content: center;
@@ -201,7 +387,7 @@
       flex-direction: column;
       gap: 6px;
       border-top: 1px solid var(--border);
-      background: #141c2b;
+      background: var(--card-footer-bg);
     }
     .card-meta {
       display: flex;
@@ -209,6 +395,7 @@
       align-items: center;
     }
     .card-id {
+      font-family: 'JetBrains Mono', monospace;
       font-size: 11px;
       font-weight: 700;
       color: var(--muted);
@@ -238,14 +425,15 @@
       overflow: hidden;
       text-overflow: ellipsis;
     }
-    
+
     /* Modal */
     .modal-backdrop {
       display: none;
       position: fixed;
       inset: 0;
-      background: rgba(0, 0, 0, 0.85);
-      backdrop-filter: blur(8px);
+      background: var(--modal-backdrop);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
       z-index: 1000;
       align-items: center;
       justify-content: center;
@@ -253,7 +441,7 @@
     }
     .modal-backdrop.open { display: flex; }
     .modal-content {
-      background: #161f30;
+      background: var(--modal-bg);
       border: 1px solid var(--border);
       border-radius: 20px;
       max-width: 1000px;
@@ -265,7 +453,7 @@
     }
     .modal-img-col {
       flex: 1.2;
-      background: #0f172a;
+      background: var(--preview-dark-bg);
       display: flex;
       align-items: center;
       justify-content: center;
@@ -286,6 +474,7 @@
       gap: 16px;
       overflow-y: auto;
       border-left: 1px solid var(--border);
+      background: var(--modal-info-bg);
     }
     .modal-header {
       display: flex;
@@ -293,8 +482,8 @@
       align-items: flex-start;
     }
     .close-btn {
-      background: #1e293b;
-      border: none;
+      background: var(--control-bg);
+      border: 1px solid var(--control-border);
       color: var(--text);
       font-size: 20px;
       width: 32px;
@@ -304,6 +493,10 @@
       display: flex;
       align-items: center;
       justify-content: center;
+      transition: border-color 0.2s;
+    }
+    .close-btn:hover {
+      border-color: var(--accent);
     }
     .btn-group {
       display: flex;
@@ -313,7 +506,7 @@
     .btn {
       flex: 1;
       background: var(--accent);
-      color: #0b0f19;
+      color: var(--btn-text);
       font-weight: 700;
       padding: 10px 16px;
       border-radius: 8px;
@@ -326,19 +519,23 @@
     }
     .btn:hover { opacity: 0.9; }
     .btn.secondary {
-      background: #1e293b;
+      background: var(--control-bg);
       color: var(--text);
-      border: 1px solid var(--border);
+      border: 1px solid var(--control-border);
+    }
+    .btn.secondary:hover {
+      border-color: var(--accent);
     }
     .detail-row {
       display: flex;
       flex-direction: column;
       gap: 4px;
       font-size: 13px;
-      border-bottom: 1px solid rgba(255,255,255,0.06);
+      border-bottom: 1px solid var(--border);
       padding-bottom: 8px;
     }
     .detail-label {
+      font-family: 'JetBrains Mono', monospace;
       color: var(--muted);
       font-weight: 600;
       font-size: 11px;
@@ -349,15 +546,51 @@
       font-size: 14px;
       font-weight: 600;
     }
+
+    footer.archive-footer {
+      max-width: 1400px;
+      margin: 48px auto 0;
+      padding: 24px 32px;
+      border-top: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      color: var(--muted);
+      font-size: 13px;
+      position: relative;
+      z-index: 1;
+    }
+    footer.archive-footer a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+    footer.archive-footer a:hover {
+      text-decoration: underline;
+    }
   </style>
 </head>
 <body>
+  <div class="glow-bg"></div>
 
   <header>
     <div class="header-content">
-      <div class="brand">
-        <h1>Pokémon Concepts • Vector Archive</h1>
-        <p>52 Authentic Hand-Drawn Concepts &amp; Homemade Cards Vectorized to Clean SVGs</p>
+      <div class="brand-group">
+        <a href="/" class="brand-back" title="Return to The Bean Board">
+          <svg viewBox="0 0 48 48" width="20" height="20" aria-hidden="true">
+            <path d="M27 9c3-5 9-6 14-4-3 4-8 6-13 6z" fill="#3f9a36"/>
+            <path d="M24 7c-8 0-13 7-13 15 0 5 2 9 2 13h22c1-5 3-9 3-14 0-8-6-14-14-14z" fill="#5cc84a" stroke="#2f7a28" stroke-width="1.6"/>
+            <ellipse cx="19.5" cy="18.5" rx="3.1" ry="3.6" fill="#fff"/>
+            <ellipse cx="28.5" cy="18.5" rx="3.1" ry="3.6" fill="#fff"/>
+            <circle cx="20.3" cy="19.3" r="1.7" fill="#1d2a16"/>
+            <circle cx="29.3" cy="19.3" r="1.7" fill="#1d2a16"/>
+          </svg>
+          <span>&larr; thebeanboard.com</span>
+        </a>
+        <div class="brand-title-wrap">
+          <h1>Pocket Monster Concepts</h1>
+          <span class="brand-badge">Vector Archive</span>
+        </div>
+        <p>52 authentic hand-drawn concepts &amp; homemade cards restored as scalable vector SVGs</p>
       </div>
 
       <div class="controls">
@@ -371,17 +604,19 @@
           <button class="mode-btn" data-mode="creatures">Creature Vectors</button>
           <button class="mode-btn" data-mode="concepts">Concept Sheets</button>
         </div>
+
+        <button id="theme-toggle" class="theme-toggle-btn" title="Toggle light/dark theme" aria-label="Toggle light/dark theme">&#9680;</button>
       </div>
     </div>
   </header>
 
   <div class="filter-bar" id="typeFilters">
-    <div class="filter-pill active" data-type="ALL">All Types (42)</div>
+    <div class="filter-pill active" data-type="ALL">All Types (52)</div>
   </div>
 
   <div class="main-container">
     <div class="stats-info">
-      <span id="matchCount">Showing 42 of 42 Pokémon concepts</span>
+      <span id="matchCount">Showing 52 of 52 Pokémon concepts</span>
       <span>156 Vector SVGs (100% Scalable Paths)</span>
     </div>
 
@@ -440,6 +675,11 @@
       </div>
     </div>
   </div>
+
+  <footer class="archive-footer">
+    <span>&copy; 2026 The Bean Board &middot; Pocket Monster Concepts Vector Archive</span>
+    <button id="theme-toggle-footer" class="theme-toggle-btn" title="Toggle light/dark theme" aria-label="Toggle light/dark theme">&#9680;</button>
+  </footer>
 
   <script>
     const typeColorMap = {
@@ -1306,6 +1546,19 @@
           window.open(img.src, "_blank");
         }
       });
+
+      // Theme toggle handlers
+      function toggleTheme() {
+        const pinned = document.documentElement.getAttribute("data-theme");
+        const dark = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
+        const next = (pinned || (dark ? "dark" : "light")) === "dark" ? "light" : "dark";
+        document.documentElement.setAttribute("data-theme", next);
+        try { localStorage.setItem("beanboard-theme", next); } catch (e) {}
+      }
+      const t1 = document.getElementById("theme-toggle");
+      if (t1) t1.addEventListener("click", toggleTheme);
+      const t2 = document.getElementById("theme-toggle-footer");
+      if (t2) t2.addEventListener("click", toggleTheme);
     }
 
     init();
