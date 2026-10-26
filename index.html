@@ -1,0 +1,1044 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pokémon Concepts • Vector Archive</title>
+  <style>
+    :root {
+      --bg: #0b0f19;
+      --card-bg: #161f30;
+      --text: #f1f5f9;
+      --muted: #94a3b8;
+      --accent: #38bdf8;
+      --border: #23354d;
+      --font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background-color: var(--bg);
+      color: var(--text);
+      font-family: var(--font);
+      line-height: 1.5;
+      padding-bottom: 80px;
+    }
+    header {
+      background: linear-gradient(180deg, rgba(30, 41, 59, 0.8) 0%, rgba(11, 15, 25, 0.95) 100%);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      padding: 20px 32px;
+    }
+    .header-content {
+      max-width: 1400px;
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+    }
+    .brand h1 {
+      font-size: 24px;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+      background: linear-gradient(90deg, #38bdf8, #818cf8, #f472b6);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .brand p {
+      font-size: 13px;
+      color: var(--muted);
+      margin-top: 2px;
+    }
+    .controls {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 12px;
+    }
+    .search-box {
+      position: relative;
+    }
+    .search-box input {
+      background: #1e293b;
+      border: 1px solid var(--border);
+      color: var(--text);
+      padding: 8px 16px 8px 36px;
+      border-radius: 999px;
+      font-size: 14px;
+      width: 220px;
+      outline: none;
+      transition: all 0.2s;
+    }
+    .search-box input:focus {
+      border-color: var(--accent);
+      width: 280px;
+    }
+    .search-box svg {
+      position: absolute;
+      left: 12px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 16px;
+      height: 16px;
+      fill: var(--muted);
+    }
+    .mode-toggle {
+      display: flex;
+      background: #1e293b;
+      border-radius: 999px;
+      padding: 3px;
+      border: 1px solid var(--border);
+    }
+    .mode-btn {
+      background: transparent;
+      border: none;
+      color: var(--muted);
+      padding: 6px 14px;
+      font-size: 13px;
+      font-weight: 600;
+      border-radius: 999px;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .mode-btn.active {
+      background: var(--accent);
+      color: #0b0f19;
+    }
+    .filter-bar {
+      max-width: 1400px;
+      margin: 16px auto 0;
+      padding: 0 32px;
+      display: flex;
+      gap: 8px;
+      overflow-x: auto;
+      padding-bottom: 8px;
+    }
+    .filter-pill {
+      background: #1e293b;
+      border: 1px solid var(--border);
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 600;
+      padding: 5px 12px;
+      border-radius: 999px;
+      cursor: pointer;
+      white-space: nowrap;
+      transition: all 0.2s;
+    }
+    .filter-pill:hover, .filter-pill.active {
+      background: #334155;
+      color: var(--text);
+      border-color: var(--accent);
+    }
+    .main-container {
+      max-width: 1400px;
+      margin: 24px auto 0;
+      padding: 0 32px;
+    }
+    .stats-info {
+      font-size: 13px;
+      color: var(--muted);
+      margin-bottom: 20px;
+      display: flex;
+      justify-content: space-between;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 24px;
+    }
+    .card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      overflow: hidden;
+      cursor: pointer;
+      transition: all 0.25s cubic-bezier(0.2, 0, 0, 1);
+      display: flex;
+      flex-direction: column;
+    }
+    .card:hover {
+      transform: translateY(-4px);
+      border-color: var(--accent);
+      box-shadow: 0 12px 28px rgba(0,0,0,0.4);
+    }
+    .card-preview {
+      width: 100%;
+      aspect-ratio: 600 / 850;
+      background: #0f172a;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      position: relative;
+    }
+    .card-preview.mode-creatures {
+      aspect-ratio: 1 / 1;
+      background: #ffffff;
+      padding: 24px;
+    }
+    .card-preview.mode-concepts {
+      aspect-ratio: 598 / 843;
+      background: #ffffff;
+      padding: 16px;
+    }
+    .card-preview img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      transition: transform 0.3s;
+    }
+    .card:hover .card-preview img {
+      transform: scale(1.02);
+    }
+    .card-body {
+      padding: 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      border-top: 1px solid var(--border);
+      background: #141c2b;
+    }
+    .card-meta {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .card-id {
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--muted);
+      letter-spacing: 1px;
+    }
+    .card-types {
+      display: flex;
+      gap: 6px;
+    }
+    .type-badge {
+      font-size: 10px;
+      font-weight: 800;
+      text-transform: uppercase;
+      padding: 2px 8px;
+      border-radius: 6px;
+      color: #fff;
+    }
+    .card-title {
+      font-size: 18px;
+      font-weight: 800;
+      color: var(--text);
+    }
+    .card-evolutions {
+      font-size: 12px;
+      color: var(--muted);
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    
+    /* Modal */
+    .modal-backdrop {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.85);
+      backdrop-filter: blur(8px);
+      z-index: 1000;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+    }
+    .modal-backdrop.open { display: flex; }
+    .modal-content {
+      background: #161f30;
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      max-width: 1000px;
+      width: 100%;
+      max-height: 90vh;
+      display: flex;
+      overflow: hidden;
+      box-shadow: 0 24px 60px rgba(0,0,0,0.6);
+    }
+    .modal-img-col {
+      flex: 1.2;
+      background: #0f172a;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 32px;
+      position: relative;
+    }
+    .modal-img-col.white-bg { background: #ffffff; }
+    .modal-img-col img {
+      max-width: 100%;
+      max-height: 75vh;
+      object-fit: contain;
+    }
+    .modal-info-col {
+      flex: 1;
+      padding: 32px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      overflow-y: auto;
+      border-left: 1px solid var(--border);
+    }
+    .modal-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+    .close-btn {
+      background: #1e293b;
+      border: none;
+      color: var(--text);
+      font-size: 20px;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .btn-group {
+      display: flex;
+      gap: 8px;
+      margin-top: 12px;
+    }
+    .btn {
+      flex: 1;
+      background: var(--accent);
+      color: #0b0f19;
+      font-weight: 700;
+      padding: 10px 16px;
+      border-radius: 8px;
+      text-decoration: none;
+      text-align: center;
+      font-size: 13px;
+      cursor: pointer;
+      border: none;
+      transition: opacity 0.2s;
+    }
+    .btn:hover { opacity: 0.9; }
+    .btn.secondary {
+      background: #1e293b;
+      color: var(--text);
+      border: 1px solid var(--border);
+    }
+    .detail-row {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      font-size: 13px;
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+      padding-bottom: 8px;
+    }
+    .detail-label {
+      color: var(--muted);
+      font-weight: 600;
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .detail-val {
+      font-size: 14px;
+      font-weight: 600;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="header-content">
+      <div class="brand">
+        <h1>Pokémon Concepts • Vector Archive</h1>
+        <p>42 Original Hand-Drawn Concepts Vectorized to Clean SVGs</p>
+      </div>
+
+      <div class="controls">
+        <div class="search-box">
+          <svg viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
+          <input type="text" id="searchInput" placeholder="Search concept or evolution...">
+        </div>
+
+        <div class="mode-toggle">
+          <button class="mode-btn active" data-mode="cards">Trading Cards</button>
+          <button class="mode-btn" data-mode="creatures">Creature Vectors</button>
+          <button class="mode-btn" data-mode="concepts">Concept Sheets</button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="filter-bar" id="typeFilters">
+    <div class="filter-pill active" data-type="ALL">All Types (42)</div>
+  </div>
+
+  <div class="main-container">
+    <div class="stats-info">
+      <span id="matchCount">Showing 42 of 42 Pokémon concepts</span>
+      <span>126 Vector SVGs (100% Scalable Paths)</span>
+    </div>
+
+    <div class="grid" id="pokemonGrid"></div>
+  </div>
+
+  <!-- Detail Modal -->
+  <div class="modal-backdrop" id="modalBackdrop">
+    <div class="modal-content">
+      <div class="modal-img-col" id="modalImgCol">
+        <img id="modalImg" src="" alt="Pokémon Vector">
+      </div>
+      <div class="modal-info-col">
+        <div class="modal-header">
+          <div>
+            <div class="card-id" id="modalId">#01</div>
+            <h2 id="modalName" style="font-size: 24px; font-weight: 800;">Ryeloaf</h2>
+          </div>
+          <button class="close-btn" id="closeModal">&times;</button>
+        </div>
+
+        <div class="mode-toggle" style="width: 100%;">
+          <button class="mode-btn modal-mode-btn active" data-mode="cards" style="flex:1;">Card</button>
+          <button class="mode-btn modal-mode-btn" data-mode="creatures" style="flex:1;">Creature</button>
+          <button class="mode-btn modal-mode-btn" data-mode="concepts" style="flex:1;">Concept Sheet</button>
+        </div>
+
+        <div class="detail-row">
+          <span class="detail-label">Types</span>
+          <div class="card-types" id="modalTypes"></div>
+        </div>
+
+        <div class="detail-row">
+          <span class="detail-label">Evolution Chain</span>
+          <span class="detail-val" id="modalEvo"></span>
+        </div>
+
+        <div class="detail-row">
+          <span class="detail-label">Archive Notes</span>
+          <span class="detail-val" id="modalNotes"></span>
+        </div>
+
+        <div class="detail-row">
+          <span class="detail-label">SVG File Formats</span>
+          <span class="detail-val" style="font-size:12px; color:var(--muted); font-weight:400;">
+            • Card: <code>vectors/cards/</code><br>
+            • Creature: <code>vectors/creatures/</code><br>
+            • Restored Sheet: <code>vectors/concepts/</code>
+          </span>
+        </div>
+
+        <div class="btn-group">
+          <a class="btn" id="downloadBtn" href="" download>Download Current SVG</a>
+          <button class="btn secondary" id="copyCodeBtn">Copy SVG Code</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const typeColorMap = {
+      Fairy: "#EC407A",
+      Water: "#29B6F6",
+      Bug: "#9CCC65",
+      Electric: "#FFEE58",
+      Fire: "#FF7043",
+      Normal: "#9E9E9E",
+      Fighting: "#EF5350",
+      Poison: "#AB47BC",
+      Ice: "#4DD0E1",
+      Steel: "#78909C",
+      Ghost: "#7E57C2",
+      Grass: "#66BB6A",
+      Dragon: "#5C6BC0",
+      Rock: "#BCAAA4",
+      Ground: "#D4E157",
+      Flying: "#4FC3F7",
+      Psychic: "#F06292",
+      Dark: "#78909C"
+    };
+
+    const POKEMON_DATA = [
+  {
+    "id": 1,
+    "name": "Ryeloaf",
+    "primary_type": "Fairy",
+    "secondary_type": null,
+    "ev1": "Berkery",
+    "ev2": "Kneeden",
+    "notes": "Bread loaf fairy creature"
+  },
+  {
+    "id": 2,
+    "name": "Flocicle",
+    "primary_type": "Water",
+    "secondary_type": "Ice",
+    "ev1": null,
+    "ev2": null,
+    "notes": "Icicle/water flow creature"
+  },
+  {
+    "id": 3,
+    "name": "Pholeap",
+    "primary_type": "Bug",
+    "secondary_type": null,
+    "ev1": "Jiglon",
+    "ev2": null,
+    "notes": "Leaping bug concept"
+  },
+  {
+    "id": 4,
+    "name": "Scribs",
+    "primary_type": "Electric",
+    "secondary_type": null,
+    "ev1": "Stato",
+    "ev2": "Flowstat",
+    "notes": "Static charge creature"
+  },
+  {
+    "id": 5,
+    "name": "Firenado",
+    "primary_type": "Fire",
+    "secondary_type": null,
+    "ev1": "Flamenado",
+    "ev2": "Infernado",
+    "notes": "Vortex flame cyclone"
+  },
+  {
+    "id": 6,
+    "name": "Floatson",
+    "primary_type": "Normal",
+    "secondary_type": "Water",
+    "ev1": "Floatmore",
+    "ev2": "Floatarey",
+    "notes": "Buoyant floating creature"
+  },
+  {
+    "id": 7,
+    "name": "Puku",
+    "primary_type": "Fairy",
+    "secondary_type": "Fighting",
+    "ev1": "Pillicka",
+    "ev2": null,
+    "notes": "Boxer puck creature (Dated 4/1/2010)"
+  },
+  {
+    "id": 8,
+    "name": "Stinsketto",
+    "primary_type": "Bug",
+    "secondary_type": "Poison",
+    "ev1": null,
+    "ev2": null,
+    "notes": "Stink mosquito concept (Dated 10-5-10)"
+  },
+  {
+    "id": 9,
+    "name": "Leatherind",
+    "primary_type": "Normal",
+    "secondary_type": "Dragon",
+    "ev1": null,
+    "ev2": null,
+    "notes": "Leathery dragon hide beast"
+  },
+  {
+    "id": 10,
+    "name": "Glaciator",
+    "primary_type": "Ice",
+    "secondary_type": "Fighting",
+    "ev1": "Freezard",
+    "ev2": null,
+    "notes": "Alligator gladiator with ice crystals"
+  },
+  {
+    "id": 11,
+    "name": "Stines",
+    "primary_type": "Poison",
+    "secondary_type": null,
+    "ev1": null,
+    "ev2": null,
+    "notes": "Toxic venomous stinger creature"
+  },
+  {
+    "id": 12,
+    "name": "Nipecoon",
+    "primary_type": "Normal",
+    "secondary_type": null,
+    "ev1": null,
+    "ev2": null,
+    "notes": "Cocoon/raccoon hybrid creature"
+  },
+  {
+    "id": 13,
+    "name": "Fizzsprits",
+    "primary_type": "Fairy",
+    "secondary_type": "Water",
+    "ev1": "Fizzaroo",
+    "ev2": "Foamdoma",
+    "notes": "Effervescent fizz fairy"
+  },
+  {
+    "id": 14,
+    "name": "Drincup",
+    "primary_type": "Water",
+    "secondary_type": null,
+    "ev1": "Spillsplash",
+    "ev2": "Soakrack",
+    "notes": "Quiet but excitable"
+  },
+  {
+    "id": 15,
+    "name": "Bandiqui",
+    "primary_type": "Bug",
+    "secondary_type": "Dark",
+    "ev1": "Thievaity",
+    "ev2": null,
+    "notes": "Bandit bug thief"
+  },
+  {
+    "id": 16,
+    "name": "Craykee",
+    "primary_type": "Steel",
+    "secondary_type": null,
+    "ev1": null,
+    "ev2": null,
+    "notes": "Metallic key/crane mechanism"
+  },
+  {
+    "id": 17,
+    "name": "Mussin",
+    "primary_type": "Fairy",
+    "secondary_type": "Normal",
+    "ev1": "Bushinch",
+    "ev2": null,
+    "notes": "Fluffy moss/bush sprite"
+  },
+  {
+    "id": 18,
+    "name": "Elelunt",
+    "primary_type": "Ghost",
+    "secondary_type": "Normal",
+    "ev1": "Elejint",
+    "ev2": "Mamotuff",
+    "notes": "Haunted pachyderm mammoth"
+  },
+  {
+    "id": 19,
+    "name": "Acesheba",
+    "primary_type": "Normal",
+    "secondary_type": null,
+    "ev1": "Aceruner",
+    "ev2": null,
+    "notes": "Swift runner canine"
+  },
+  {
+    "id": 20,
+    "name": "Frightnite",
+    "primary_type": "Ghost",
+    "secondary_type": null,
+    "ev1": "Frightlite",
+    "ev2": "Nite Lite",
+    "notes": "Corner nocturnal apparitions"
+  },
+  {
+    "id": 21,
+    "name": "Konetoad",
+    "primary_type": "Water",
+    "secondary_type": "Ground",
+    "ev1": null,
+    "ev2": null,
+    "notes": "Cone-shelled amphibian toad"
+  },
+  {
+    "id": 22,
+    "name": "Floopy Jr.",
+    "primary_type": "Normal",
+    "secondary_type": null,
+    "ev1": null,
+    "ev2": null,
+    "notes": "Cheerful shapeless blob"
+  },
+  {
+    "id": 23,
+    "name": "Rosewall",
+    "primary_type": "Grass",
+    "secondary_type": null,
+    "ev1": null,
+    "ev2": null,
+    "notes": "Floral barrier blossom"
+  },
+  {
+    "id": 24,
+    "name": "Shinecloud",
+    "primary_type": "Fire",
+    "secondary_type": "Electric",
+    "ev1": "Funzap",
+    "ev2": "Funderstorm",
+    "notes": "Playful and mischievous"
+  },
+  {
+    "id": 25,
+    "name": "Yourbee",
+    "primary_type": "Grass",
+    "secondary_type": "Bug",
+    "ev1": "Yourdrone",
+    "ev2": "Youroyale",
+    "notes": "Happy but quick to anger"
+  },
+  {
+    "id": 26,
+    "name": "Zeebean",
+    "primary_type": "Fighting",
+    "secondary_type": "Electric",
+    "ev1": "Zeepod",
+    "ev2": "Sproutbout",
+    "notes": "Energetic bean fighter"
+  },
+  {
+    "id": 27,
+    "name": "Zowzahorn",
+    "primary_type": "Fairy",
+    "secondary_type": "Dragon",
+    "ev1": "Drumiss",
+    "ev2": "Zowzaband",
+    "notes": "Musical seahorse trumpet (Fairy/Dragon/Water)"
+  },
+  {
+    "id": 28,
+    "name": "Sir Pressur",
+    "primary_type": "Steel",
+    "secondary_type": null,
+    "ev1": null,
+    "ev2": null,
+    "notes": "Armored pressure knight"
+  },
+  {
+    "id": 29,
+    "name": "Mushroot",
+    "primary_type": "Grass",
+    "secondary_type": null,
+    "ev1": null,
+    "ev2": null,
+    "notes": "Fungal spore root"
+  },
+  {
+    "id": 30,
+    "name": "Nosesniffa",
+    "primary_type": "Normal",
+    "secondary_type": "Flying",
+    "ev1": "Achooket",
+    "ev2": "Lucisnuff",
+    "notes": "Keen-scented avian"
+  },
+  {
+    "id": 31,
+    "name": "Lockit",
+    "primary_type": "Steel",
+    "secondary_type": null,
+    "ev1": null,
+    "ev2": null,
+    "notes": "Padlock fortress guardian"
+  },
+  {
+    "id": 32,
+    "name": "Shardu",
+    "primary_type": "Rock",
+    "secondary_type": "Steel",
+    "ev1": "Shardthrew",
+    "ev2": "Shardpoon",
+    "notes": "Geometric crystal shard entity"
+  },
+  {
+    "id": 33,
+    "name": "Smile",
+    "primary_type": "Normal",
+    "secondary_type": "Fairy",
+    "ev1": "Emozs",
+    "ev2": null,
+    "notes": "Joyful emotion expression creature"
+  },
+  {
+    "id": 34,
+    "name": "Battlelite",
+    "primary_type": "Steel",
+    "secondary_type": "Fighting",
+    "ev1": null,
+    "ev2": null,
+    "notes": "Combat automaton warrior"
+  },
+  {
+    "id": 35,
+    "name": "Bedder",
+    "primary_type": "Normal",
+    "secondary_type": null,
+    "ev1": "Bedrsar",
+    "ev2": "Snordabed",
+    "notes": "Sleepy slumber pillow creature"
+  },
+  {
+    "id": 36,
+    "name": "Grarepatch",
+    "primary_type": "Grass",
+    "secondary_type": null,
+    "ev1": "Hopiow",
+    "ev2": "Basebun",
+    "notes": "Meadow patch rabbit creature"
+  },
+  {
+    "id": 37,
+    "name": "Plastisteel",
+    "primary_type": "Steel",
+    "secondary_type": null,
+    "ev1": "Amalgamate",
+    "ev2": null,
+    "notes": "Malleable synthetic metal alloy"
+  },
+  {
+    "id": 38,
+    "name": "Snarcor",
+    "primary_type": "Rock",
+    "secondary_type": "Psychic",
+    "ev1": null,
+    "ev2": null,
+    "notes": "Mystic mineral psychic"
+  },
+  {
+    "id": 39,
+    "name": "Jointremel",
+    "primary_type": "Fairy",
+    "secondary_type": "Normal",
+    "ev1": "Nottied",
+    "ev2": null,
+    "notes": "Ribbon tied pretzel fairy"
+  },
+  {
+    "id": 40,
+    "name": "Clownini",
+    "primary_type": "Psychic",
+    "secondary_type": "Ghost",
+    "ev1": null,
+    "ev2": null,
+    "notes": "Phantom jester apparition"
+  },
+  {
+    "id": 41,
+    "name": "Potlee",
+    "primary_type": "Ground",
+    "secondary_type": "Grass",
+    "ev1": "Baysprout",
+    "ev2": null,
+    "notes": "Earthen pot sproutling"
+  },
+  {
+    "id": 42,
+    "name": "Brufru",
+    "primary_type": "Fairy",
+    "secondary_type": "Grass",
+    "ev1": "Fruchew",
+    "ev2": "Chuthrou",
+    "notes": "Sweet berry fruit fairy"
+  }
+];
+    let pokemonData = POKEMON_DATA;
+    let currentMode = "cards";
+    let currentTypeFilter = "ALL";
+    let searchQuery = "";
+    let selectedPokemon = null;
+
+    function init() {
+      buildTypeFilters();
+      renderGrid();
+      setupEvents();
+    }
+
+    function buildTypeFilters() {
+      const types = new Set();
+      pokemonData.forEach(p => {
+        if (p.primary_type) types.add(p.primary_type);
+        if (p.secondary_type) types.add(p.secondary_type);
+      });
+      const bar = document.getElementById("typeFilters");
+      types.forEach(t => {
+        const pill = document.createElement("div");
+        pill.className = "filter-pill";
+        pill.dataset.type = t;
+        pill.textContent = t;
+        pill.addEventListener("click", () => {
+          document.querySelectorAll(".filter-pill").forEach(p => p.classList.remove("active"));
+          pill.classList.add("active");
+          currentTypeFilter = t;
+          renderGrid();
+        });
+        bar.appendChild(pill);
+      });
+    }
+
+    function getSvgPath(p, mode) {
+      const idStr = String(p.id).padStart(2, "0");
+      const safeName = p.name.toLowerCase().replace(/ /g, "_").replace(/\./g, "");
+      if (mode === "cards") return `vectors/cards/${idStr}_${safeName}_card.svg`;
+      if (mode === "creatures") return `vectors/creatures/${idStr}_${safeName}_creature.svg`;
+      return `vectors/concepts/${idStr}_${safeName}.svg`;
+    }
+
+    function renderGrid() {
+      const grid = document.getElementById("pokemonGrid");
+      grid.innerHTML = "";
+
+      const filtered = pokemonData.filter(p => {
+        const matchesType = currentTypeFilter === "ALL" ||
+          p.primary_type === currentTypeFilter ||
+          p.secondary_type === currentTypeFilter;
+        
+        const q = searchQuery.toLowerCase();
+        const matchesSearch = !q ||
+          p.name.toLowerCase().includes(q) ||
+          (p.ev1 && p.ev1.toLowerCase().includes(q)) ||
+          (p.ev2 && p.ev2.toLowerCase().includes(q)) ||
+          (p.notes && p.notes.toLowerCase().includes(q));
+
+        return matchesType && matchesSearch;
+      });
+
+      document.getElementById("matchCount").textContent = `Showing ${filtered.length} of ${pokemonData.length} Pokémon concepts`;
+
+      filtered.forEach(p => {
+        const card = document.createElement("div");
+        card.className = "card";
+        const svgSrc = getSvgPath(p, currentMode);
+
+        const idStr = String(p.id).padStart(2, "0");
+        let evoStr = "Single Stage";
+        if (p.ev1) evoStr = `→ ${p.ev1}` + (p.ev2 ? ` → ${p.ev2}` : "");
+
+        const pColor = typeColorMap[p.primary_type] || "#78909C";
+        const sColor = p.secondary_type ? (typeColorMap[p.secondary_type] || "#78909C") : null;
+
+        card.innerHTML = `
+          <div class="card-preview mode-${currentMode}">
+            <img src="${svgSrc}" alt="${p.name} Vector" loading="lazy">
+          </div>
+          <div class="card-body">
+            <div class="card-meta">
+              <span class="card-id">#${idStr}</span>
+              <div class="card-types">
+                <span class="type-badge" style="background:${pColor}">${p.primary_type}</span>
+                ${p.secondary_type ? `<span class="type-badge" style="background:${sColor}">${p.secondary_type}</span>` : ""}
+              </div>
+            </div>
+            <div class="card-title">${p.name}</div>
+            <div class="card-evolutions">${evoStr}</div>
+          </div>
+        `;
+
+        card.addEventListener("click", () => openModal(p));
+        grid.appendChild(card);
+      });
+    }
+
+    function openModal(p) {
+      selectedPokemon = p;
+      const modal = document.getElementById("modalBackdrop");
+      const idStr = String(p.id).padStart(2, "0");
+      document.getElementById("modalId").textContent = `#${idStr} / 42`;
+      document.getElementById("modalName").textContent = p.name;
+
+      const typesEl = document.getElementById("modalTypes");
+      const pColor = typeColorMap[p.primary_type] || "#78909C";
+      typesEl.innerHTML = `<span class="type-badge" style="background:${pColor}; font-size:12px; padding:3px 10px;">${p.primary_type}</span>`;
+      if (p.secondary_type) {
+        const sColor = typeColorMap[p.secondary_type] || "#78909C";
+        typesEl.innerHTML += `<span class="type-badge" style="background:${sColor}; font-size:12px; padding:3px 10px;">${p.secondary_type}</span>`;
+      }
+
+      let evoStr = "None (Single Stage)";
+      if (p.ev1) evoStr = `${p.name} → ${p.ev1}` + (p.ev2 ? ` → ${p.ev2}` : "");
+      document.getElementById("modalEvo").textContent = evoStr;
+      document.getElementById("modalNotes").textContent = p.notes || "Original archive concept";
+
+      updateModalImage(currentMode);
+      modal.classList.add("open");
+    }
+
+    function updateModalImage(mode) {
+      if (!selectedPokemon) return;
+      const src = getSvgPath(selectedPokemon, mode);
+      const img = document.getElementById("modalImg");
+      const col = document.getElementById("modalImgCol");
+      img.src = src;
+      col.className = "modal-img-col " + (mode !== "cards" ? "white-bg" : "");
+      
+      const dl = document.getElementById("downloadBtn");
+      dl.href = src;
+      dl.download = src.split("/").pop();
+
+      document.querySelectorAll(".modal-mode-btn").forEach(b => {
+        b.classList.toggle("active", b.dataset.mode === mode);
+      });
+    }
+
+    function setupEvents() {
+      // Search
+      document.getElementById("searchInput").addEventListener("input", (e) => {
+        searchQuery = e.target.value;
+        renderGrid();
+      });
+
+      // Mode toggles
+      document.querySelectorAll(".mode-btn:not(.modal-mode-btn)").forEach(btn => {
+        btn.addEventListener("click", () => {
+          document.querySelectorAll(".mode-btn:not(.modal-mode-btn)").forEach(b => b.classList.remove("active"));
+          btn.classList.add("active");
+          currentMode = btn.dataset.mode;
+          renderGrid();
+        });
+      });
+
+      // Modal mode toggles
+      document.querySelectorAll(".modal-mode-btn").forEach(btn => {
+        btn.addEventListener("click", () => {
+          updateModalImage(btn.dataset.mode);
+        });
+      });
+
+      // Type "ALL"
+      document.querySelector('.filter-pill[data-type="ALL"]').addEventListener("click", (e) => {
+        document.querySelectorAll(".filter-pill").forEach(p => p.classList.remove("active"));
+        e.target.classList.add("active");
+        currentTypeFilter = "ALL";
+        renderGrid();
+      });
+
+      // Close modal
+      document.getElementById("closeModal").addEventListener("click", () => {
+        document.getElementById("modalBackdrop").classList.remove("open");
+      });
+      document.getElementById("modalBackdrop").addEventListener("click", (e) => {
+        if (e.target.id === "modalBackdrop") {
+          e.target.classList.remove("open");
+        }
+      });
+
+      // Copy SVG code
+      document.getElementById("copyCodeBtn").addEventListener("click", async () => {
+        const img = document.getElementById("modalImg");
+        try {
+          const res = await fetch(img.src);
+          const text = await res.text();
+          await navigator.clipboard.writeText(text);
+          alert("SVG XML copied to clipboard!");
+        } catch (err) {
+          // If viewing locally via file://, open the SVG in a new tab where source can be copied
+          window.open(img.src, "_blank");
+        }
+      });
+    }
+
+    init();
+  </script>
+</body>
+</html>

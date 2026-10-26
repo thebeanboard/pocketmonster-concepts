@@ -1,0 +1,214 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 850" width="600" height="850">
+  <defs>
+    <linearGradient id="cardBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#EFEBE9" />
+      <stop offset="50%" stop-color="#FFFFFF" />
+      <stop offset="100%" stop-color="#EFEBE9" />
+    </linearGradient>
+    <linearGradient id="foilBorder" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3E2723" />
+      <stop offset="30%" stop-color="#BCAAA4" />
+      <stop offset="70%" stop-color="#FFD700" />
+      <stop offset="100%" stop-color="#BCAAA4" />
+    </linearGradient>
+    <linearGradient id="bannerGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#BCAAA4" />
+      <stop offset="100%" stop-color="#3E2723" />
+    </linearGradient>
+    <filter id="cardShadow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-opacity="0.25" flood-color="#000000" />
+    </filter>
+    <filter id="artShadow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="2" stdDeviation="4" flood-opacity="0.15" />
+    </filter>
+  </defs>
+
+  <!-- Card Base -->
+  <rect x="15" y="15" width="570" height="820" rx="28" fill="url(#foilBorder)" filter="url(#cardShadow)" />
+  <rect x="25" y="25" width="550" height="800" rx="22" fill="url(#cardBg)" />
+  <rect x="32" y="32" width="536" height="786" rx="18" fill="none" stroke="#BCAAA4" stroke-width="2" opacity="0.4" />
+
+  <!-- Top Header Bar -->
+  <g transform="translate(45, 45)">
+    <text x="0" y="22" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="700" fill="#3E2723" letter-spacing="1">BASIC POKÉMON</text>
+    <text x="0" y="52" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="28" font-weight="900" fill="#212121">Shardu</text>
+    
+    <!-- HP -->
+    <text x="440" y="48" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="14" font-weight="800" fill="#3E2723">HP</text>
+    <text x="465" y="50" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="24" font-weight="900" fill="#212121">100</text>
+  </g>
+
+  <!-- Type Badges -->
+  <g transform="translate(45, 105)">
+    <rect x="0" y="0" width="80" height="24" rx="12" fill="#BCAAA4" />
+    <text x="40.0" y="16" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="800" fill="#FFFFFF" text-anchor="middle">ROCK</text>
+    
+    <rect x="90" y="0" width="80" height="24" rx="12" fill="#90A4AE" />
+<text x="130" y="16" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="800" fill="#FFFFFF" text-anchor="middle">STEEL</text>
+    
+    <text x="510" y="16" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="700" fill="#757575" text-anchor="end">NO. 32 / 42</text>
+  </g>
+
+  <!-- Illustration Frame -->
+  <g transform="translate(45, 140)">
+    <rect x="0" y="0" width="510" height="340" rx="16" fill="#FFFFFF" stroke="#3E2723" stroke-width="3" filter="url(#artShadow)" />
+    <rect x="6" y="6" width="498" height="328" rx="12" fill="#EFEBE9" opacity="0.3" />
+    <circle cx="255" cy="170" r="130" fill="#EFEBE9" opacity="0.5" />
+    
+    <!-- Embedded Traced Creature SVG -->
+    <svg x="20" y="15" width="470" height="310" viewBox="0 0 459.000000 739.000000" preserveAspectRatio="xMidYMid meet">
+      <g transform="translate(0.000000,739.000000) scale(0.100000,-0.100000)"
+fill="#000000" stroke="none">
+<path d="M2045 6960 c-461 -25 -575 -37 -575 -61 0 -6 -22 -45 -48 -87 -27
+-42 -55 -97 -62 -122 -7 -25 -21 -54 -30 -65 -9 -11 -25 -40 -34 -65 -10 -25
+-23 -52 -29 -60 -26 -32 -127 -228 -127 -244 0 -5 -6 -17 -14 -25 -7 -9 -24
+-36 -37 -61 -13 -25 -36 -60 -51 -78 -16 -18 -28 -39 -28 -47 0 -18 -63 -126
+-98 -168 -15 -18 -36 -48 -46 -67 -10 -19 -41 -64 -67 -100 -53 -73 -119 -186
+-119 -204 0 -6 -18 -38 -40 -71 -22 -33 -40 -63 -40 -68 0 -11 -86 -133 -149
+-211 -47 -60 -55 -76 -54 -108 1 -26 11 -50 29 -71 35 -42 163 -183 207 -227
+31 -31 115 -133 202 -243 17 -21 44 -56 60 -77 94 -120 213 -277 234 -308 13
+-21 85 -97 158 -171 74 -73 140 -143 148 -155 23 -36 -20 -266 -51 -266 -8 0
+-14 -4 -14 -10 0 -5 5 -10 11 -10 8 0 10 -14 6 -42 -3 -24 -9 -63 -12 -88 -4
+-25 -11 -54 -16 -65 -17 -38 -60 -244 -53 -256 2 -4 -3 -23 -11 -42 -8 -19
+-12 -37 -9 -40 3 -3 1 -23 -5 -44 -6 -22 -13 -64 -17 -94 -3 -30 -12 -87 -20
+-128 -7 -40 -12 -77 -9 -80 2 -4 -2 -25 -9 -47 -8 -21 -16 -66 -19 -99 -6 -76
+-26 -192 -37 -225 -11 -30 -16 -69 -25 -175 l-7 -80 48 -45 c84 -77 454 -450
+557 -560 53 -58 117 -125 140 -150 23 -25 67 -76 97 -113 29 -37 57 -67 61
+-67 11 0 78 -68 119 -119 19 -25 53 -63 75 -86 127 -133 223 -262 294 -397 20
+-38 54 -68 76 -68 4 0 81 134 129 225 20 39 54 102 75 140 42 75 255 501 313
+625 66 139 118 245 141 285 63 111 115 197 156 259 25 39 57 91 71 118 14 26
+59 92 101 146 42 54 88 119 103 144 15 26 34 52 43 60 9 7 24 33 35 57 10 25
+36 64 56 87 86 100 179 192 200 198 12 4 22 11 22 15 0 12 36 51 47 51 14 0
+60 52 67 76 5 16 -6 31 -52 71 -32 28 -71 59 -88 69 -16 11 -50 35 -74 56 -25
+20 -117 93 -205 163 -88 70 -167 135 -176 144 -9 9 -35 27 -58 41 -23 14 -68
+45 -100 70 -70 55 -136 96 -261 164 l-95 51 0 45 c1 114 56 534 80 605 7 22
+16 67 20 100 3 33 17 121 31 195 26 140 27 147 68 320 13 58 29 139 35 180 15
+98 30 175 47 230 7 25 16 68 20 95 3 28 10 57 15 66 4 9 13 47 20 85 33 196
+64 328 89 374 6 12 10 35 8 53 -3 36 -10 38 -208 81 -184 39 -201 43 -280 66
+-127 36 -180 48 -316 69 -73 12 -151 28 -175 36 -24 9 -71 18 -104 21 -103 10
+-100 9 -97 35 5 44 172 367 227 440 30 40 55 80 55 90 0 48 -245 75 -545 59z
+m363 -86 c12 -2 22 -8 22 -12 0 -5 -29 -60 -65 -123 -97 -168 -152 -290 -170
+-371 -9 -40 -20 -86 -26 -103 -10 -32 7 -66 43 -89 21 -13 58 17 58 48 0 39
+11 43 100 35 47 -4 101 -13 120 -20 35 -12 82 -20 220 -37 41 -6 120 -22 175
+-36 147 -39 236 -62 374 -95 68 -17 126 -32 128 -35 2 -2 -3 -30 -11 -62 -8
+-33 -24 -115 -36 -184 -11 -69 -30 -159 -40 -200 -25 -102 -56 -241 -70 -320
+-22 -130 -32 -177 -57 -280 -13 -58 -32 -134 -40 -170 -9 -36 -19 -94 -23
+-130 -4 -36 -15 -101 -25 -145 -9 -44 -20 -109 -25 -145 -5 -36 -20 -124 -34
+-195 -14 -72 -27 -176 -30 -233 -3 -56 -11 -140 -17 -186 -11 -77 -10 -86 7
+-109 11 -15 35 -33 54 -42 19 -8 62 -31 95 -50 33 -19 67 -38 75 -41 22 -8
+182 -116 225 -151 6 -5 51 -40 100 -78 50 -38 92 -72 95 -75 3 -3 27 -21 55
+-40 27 -19 57 -41 66 -50 9 -8 36 -31 60 -50 24 -19 62 -51 84 -71 22 -20 66
+-53 97 -73 31 -19 60 -41 64 -47 6 -11 -93 -111 -165 -167 -51 -40 -160 -178
+-220 -279 -30 -50 -82 -129 -115 -175 -56 -77 -161 -233 -231 -343 -40 -63
+-84 -141 -145 -255 -27 -52 -60 -113 -72 -136 -23 -40 -72 -145 -102 -214 -8
+-19 -22 -46 -30 -60 -9 -14 -31 -56 -49 -95 -56 -115 -176 -347 -188 -361 -6
+-8 -36 -62 -66 -121 -30 -60 -64 -123 -75 -140 l-20 -33 -54 76 c-71 98 -107
+144 -170 213 -29 31 -73 81 -100 111 -73 84 -114 128 -179 194 -33 34 -75 79
+-94 101 -19 22 -57 65 -85 96 -28 31 -94 103 -146 160 -111 123 -320 332 -442
+444 l-87 80 9 95 c5 52 14 115 19 140 5 25 15 77 22 115 6 39 18 96 25 128 8
+32 14 70 14 84 0 81 76 475 135 703 18 69 60 265 75 350 6 36 16 84 21 107 5
+26 5 51 0 65 -10 23 -82 103 -131 144 -96 81 -251 265 -340 405 -14 21 -29 39
+-35 39 -6 0 -16 9 -22 19 -7 11 -40 55 -75 98 -35 43 -77 98 -93 122 -17 25
+-65 81 -109 125 -135 140 -236 251 -236 261 0 4 38 64 83 133 79 120 178 288
+197 335 13 33 93 159 199 313 51 75 99 150 107 168 7 17 30 58 49 91 19 33 50
+87 68 120 17 32 53 98 79 145 26 47 81 153 123 235 149 294 138 280 233 294
+71 10 214 21 487 37 61 3 112 8 114 10 4 3 138 -6 169 -12z"/>
+<path d="M2123 6822 c-12 -9 -29 -35 -36 -57 -12 -36 -23 -45 -97 -85 -81 -43
+-86 -48 -122 -115 -62 -114 -174 -346 -198 -408 -13 -32 -42 -80 -66 -106 -24
+-27 -44 -54 -44 -59 0 -21 45 -42 90 -42 57 0 178 31 214 55 20 13 46 56 86
+139 32 67 81 170 110 231 65 137 103 196 168 264 29 30 52 58 52 62 0 5 -9 14
+-19 21 -10 6 -18 16 -16 22 16 56 15 66 -7 66 -13 1 -34 7 -48 15 -32 18 -40
+18 -67 -3z m28 -62 c-25 -22 -41 -26 -41 -10 0 11 30 29 50 29 10 0 8 -6 -9
+-19z m-101 -169 c0 -4 -15 -28 -34 -52 -18 -24 -43 -63 -54 -86 -22 -42 -42
+-63 -42 -44 0 16 70 144 93 169 21 23 37 29 37 13z"/>
+<path d="M1790 6780 c-8 -5 -35 -10 -58 -10 -54 0 -111 -26 -122 -55 -5 -12
+-14 -28 -22 -36 -27 -29 -58 -79 -58 -92 0 -8 -9 -22 -20 -32 -12 -11 -20 -31
+-20 -51 0 -18 -6 -37 -12 -41 -16 -10 -58 -69 -58 -81 0 -5 -6 -15 -14 -21 -8
+-7 -18 -27 -22 -44 -6 -27 -33 -91 -52 -123 -36 -58 -67 -96 -101 -123 -41
+-33 -51 -61 -28 -78 12 -9 253 -11 260 -2 19 25 92 147 117 196 18 34 41 65
+51 68 10 3 55 64 99 135 45 72 86 132 90 135 5 3 17 23 27 43 9 20 32 59 50
+86 38 55 36 59 -31 108 -42 30 -53 33 -76 18z m35 -90 c11 -18 -16 -40 -50
+-40 -29 0 -36 -7 -76 -72 -24 -40 -64 -113 -90 -163 -72 -141 -110 -209 -120
+-219 -5 -6 -9 -17 -9 -27 0 -9 -13 -33 -30 -54 -16 -21 -30 -44 -30 -51 0 -10
+-14 -14 -45 -14 -25 0 -45 3 -45 6 0 4 15 25 34 48 18 23 48 73 65 111 46 100
+91 186 113 214 10 13 18 28 18 33 0 6 11 23 25 40 14 16 25 35 25 43 0 19 47
+98 72 122 29 27 131 43 143 23z"/>
+<path d="M2770 4395 c-18 -47 -134 -210 -185 -260 -29 -27 -64 -67 -80 -88
+-25 -34 -26 -39 -14 -70 7 -17 40 -61 74 -97 71 -75 111 -136 155 -235 17 -38
+40 -88 51 -110 10 -22 19 -45 19 -51 0 -21 58 -66 81 -62 21 3 25 10 31 67 4
+35 14 71 23 80 24 28 18 60 -22 106 -39 44 -63 86 -107 188 -24 56 -25 59 -8
+86 9 16 32 55 51 86 19 32 54 88 78 124 58 89 57 111 -10 183 -46 50 -88 78
+-118 78 -5 0 -14 -11 -19 -25z m85 -125 c8 -13 -13 -50 -29 -50 -8 0 -20 -14
+-27 -32 -7 -17 -28 -51 -46 -75 -18 -24 -33 -45 -33 -48 0 -3 -11 -23 -25 -45
+-30 -48 -31 -69 -4 -121 11 -23 19 -43 17 -45 -7 -6 -108 114 -108 129 0 8 7
+21 17 28 23 20 120 135 173 208 45 62 54 69 65 51z"/>
+<path d="M1585 4400 c-11 -4 -49 -35 -85 -68 -61 -56 -64 -61 -55 -87 7 -19
+33 -44 75 -72 76 -49 181 -130 227 -173 l32 -30 -15 -43 c-8 -23 -24 -62 -36
+-87 -22 -48 -22 -64 0 -317 8 -94 26 -123 77 -123 30 0 35 5 55 53 25 60 117
+246 161 327 109 200 108 237 -5 329 -39 32 -92 72 -119 90 -26 18 -57 45 -69
+62 -12 16 -51 44 -86 61 -36 18 -78 45 -95 61 -32 29 -33 30 -62 17z m101
+-157 c33 -21 67 -42 76 -48 18 -11 89 -60 178 -124 63 -44 66 -58 29 -137 -37
+-83 -98 -208 -113 -234 -8 -14 -20 -40 -27 -58 -6 -18 -14 -30 -17 -27 -12 12
+-11 124 1 137 38 40 71 163 60 223 -7 37 -25 59 -83 98 -25 17 -70 51 -100 77
+-30 26 -68 55 -85 65 -16 11 -32 20 -34 22 -7 5 31 43 44 43 6 0 38 -17 71
+-37z"/>
+<path d="M2287 3894 c-28 -15 -28 -17 -21 -72 9 -64 9 -67 0 -206 -4 -55 -12
+-108 -17 -119 -10 -17 -6 -31 9 -33 4 0 21 -6 37 -13 17 -7 53 -17 80 -22 121
+-21 160 -27 167 -22 16 9 7 61 -17 93 -14 19 -33 59 -43 90 -9 30 -29 75 -43
+100 -15 25 -35 78 -44 118 -24 102 -46 119 -108 86z m99 -381 c-9 -9 -37 11
+-32 24 3 8 6 24 7 36 0 15 5 10 15 -17 8 -22 12 -41 10 -43z"/>
+<path d="M2747 1344 c-3 -4 -72 -9 -152 -13 -140 -6 -147 -8 -166 -31 -25 -34
+-24 -42 14 -83 19 -19 44 -64 57 -99 45 -123 66 -155 102 -160 18 -3 38 -3 45
+-1 7 3 26 42 44 86 17 45 44 102 60 126 16 25 29 50 29 56 0 7 7 18 15 25 19
+16 19 50 -1 78 -15 22 -34 28 -47 16z m-67 -140 c-24 -62 -64 -134 -76 -134
+-10 0 -26 32 -71 148 -4 9 15 12 76 12 l81 0 -10 -26z"/>
+</g>
+
+    </svg>
+  </g>
+
+  <!-- Evolution Banner -->
+  <g transform="translate(45, 495)">
+    <rect x="0" y="0" width="510" height="28" rx="6" fill="#F0F0F0" />
+    <text x="15" y="18" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="700" fill="#616161">Evolves into: Shardthrew → Shardpoon</text>
+  </g>
+
+  <!-- Moves & Concept Abilities -->
+  <g transform="translate(45, 540)">
+    <!-- Concept Attack 1 -->
+    <circle cx="16" cy="16" r="14" fill="#BCAAA4" />
+    <circle cx="16" cy="16" r="6" fill="#FFFFFF" />
+    <text x="40" y="21" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="18" font-weight="800" fill="#212121">Original Concept</text>
+    <text x="510" y="21" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="18" font-weight="800" fill="#212121" text-anchor="end">40+</text>
+    <text x="40" y="42" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="500" fill="#616161">Hand-drawn authentic archive concept. Traced as scalable vector.</text>
+    
+    <line x1="0" y1="58" x2="510" y2="58" stroke="#E0E0E0" stroke-width="1" />
+
+    <!-- Move 2 -->
+    <circle cx="16" cy="85" r="14" fill="#BCAAA4" />
+    <circle cx="48" cy="85" r="14" fill="#90A4AE" />
+    <text x="75" y="90" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="18" font-weight="800" fill="#212121">Shardu Surge</text>
+    <text x="510" y="90" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="18" font-weight="800" fill="#212121" text-anchor="end">80</text>
+    <text x="75" y="110" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-style="italic" fill="#616161">Geometric crystal shard entity</text>
+  </g>
+
+  <!-- Bottom Stats / Footer -->
+  <g transform="translate(45, 720)">
+    <line x1="0" y1="0" x2="510" y2="0" stroke="#BCAAA4" stroke-width="2" opacity="0.3" />
+    
+    <text x="30" y="22" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" font-weight="700" fill="#757575">WEAKNESS</text>
+    <text x="210" y="22" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" font-weight="700" fill="#757575">RESISTANCE</text>
+    <text x="400" y="22" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" font-weight="700" fill="#757575">RETREAT</text>
+
+    <circle cx="30" cy="40" r="10" fill="#EF5350" />
+    <text x="46" y="44" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="800" fill="#212121">×2</text>
+
+    <circle cx="210" cy="40" r="10" fill="#78909C" />
+    <text x="226" y="44" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="800" fill="#212121">-20</text>
+
+    <circle cx="400" cy="40" r="10" fill="#BDBDBD" />
+    <circle cx="425" cy="40" r="10" fill="#BDBDBD" />
+
+    <text x="255" y="78" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" font-weight="700" fill="#9E9E9E" text-anchor="middle">© Pocket Monster Concepts Archive • Vector Edition 2026</text>
+  </g>
+</svg>

@@ -1,0 +1,209 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 850" width="600" height="850">
+  <defs>
+    <linearGradient id="cardBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F5F5F5" />
+      <stop offset="50%" stop-color="#FFFFFF" />
+      <stop offset="100%" stop-color="#F5F5F5" />
+    </linearGradient>
+    <linearGradient id="foilBorder" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#424242" />
+      <stop offset="30%" stop-color="#BDBDBD" />
+      <stop offset="70%" stop-color="#FFD700" />
+      <stop offset="100%" stop-color="#BDBDBD" />
+    </linearGradient>
+    <linearGradient id="bannerGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#BDBDBD" />
+      <stop offset="100%" stop-color="#424242" />
+    </linearGradient>
+    <filter id="cardShadow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-opacity="0.25" flood-color="#000000" />
+    </filter>
+    <filter id="artShadow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="2" stdDeviation="4" flood-opacity="0.15" />
+    </filter>
+  </defs>
+
+  <!-- Card Base -->
+  <rect x="15" y="15" width="570" height="820" rx="28" fill="url(#foilBorder)" filter="url(#cardShadow)" />
+  <rect x="25" y="25" width="550" height="800" rx="22" fill="url(#cardBg)" />
+  <rect x="32" y="32" width="536" height="786" rx="18" fill="none" stroke="#BDBDBD" stroke-width="2" opacity="0.4" />
+
+  <!-- Top Header Bar -->
+  <g transform="translate(45, 45)">
+    <text x="0" y="22" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="700" fill="#424242" letter-spacing="1">BASIC POKÉMON</text>
+    <text x="0" y="52" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="28" font-weight="900" fill="#212121">Bedder</text>
+    
+    <!-- HP -->
+    <text x="440" y="48" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="14" font-weight="800" fill="#424242">HP</text>
+    <text x="465" y="50" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="24" font-weight="900" fill="#212121">60</text>
+  </g>
+
+  <!-- Type Badges -->
+  <g transform="translate(45, 105)">
+    <rect x="0" y="0" width="95" height="24" rx="12" fill="#BDBDBD" />
+    <text x="47.5" y="16" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="800" fill="#FFFFFF" text-anchor="middle">NORMAL</text>
+    
+    
+    
+    <text x="510" y="16" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="700" fill="#757575" text-anchor="end">NO. 35 / 42</text>
+  </g>
+
+  <!-- Illustration Frame -->
+  <g transform="translate(45, 140)">
+    <rect x="0" y="0" width="510" height="340" rx="16" fill="#FFFFFF" stroke="#424242" stroke-width="3" filter="url(#artShadow)" />
+    <rect x="6" y="6" width="498" height="328" rx="12" fill="#F5F5F5" opacity="0.3" />
+    <circle cx="255" cy="170" r="130" fill="#F5F5F5" opacity="0.5" />
+    
+    <!-- Embedded Traced Creature SVG -->
+    <svg x="20" y="15" width="470" height="310" viewBox="0 0 483.000000 431.000000" preserveAspectRatio="xMidYMid meet">
+      <g transform="translate(0.000000,431.000000) scale(0.100000,-0.100000)"
+fill="#000000" stroke="none">
+<path d="M3110 3870 c-62 -11 -114 -35 -175 -80 -61 -45 -90 -88 -98 -145 -4
+-22 -14 -64 -22 -93 l-16 -53 -97 6 c-53 4 -131 7 -172 8 -41 1 -79 5 -85 9
+-5 3 -37 9 -70 13 -33 3 -73 9 -90 11 -78 13 -181 15 -261 4 -100 -13 -96 -15
+-114 70 -11 51 -20 65 -76 121 -59 59 -66 63 -118 67 -36 3 -73 -1 -105 -12
+-27 -9 -62 -16 -77 -16 -15 0 -42 -9 -60 -21 -36 -22 -114 -131 -114 -158 0
+-9 -5 -22 -12 -29 -9 -9 -12 -88 -11 -305 1 -161 -1 -315 -5 -342 l-7 -49 -99
+-19 c-95 -19 -100 -19 -129 -2 -26 15 -45 17 -141 11 -129 -8 -181 -23 -249
+-73 -108 -80 -189 -183 -233 -301 -55 -146 -58 -164 -44 -320 7 -78 17 -145
+21 -148 5 -3 9 -13 9 -23 0 -37 40 -107 87 -152 71 -69 134 -106 184 -108 15
+-1 99 -116 112 -153 4 -10 11 -18 16 -18 5 0 13 -9 16 -20 3 -11 11 -20 17
+-20 6 0 27 -18 46 -40 19 -22 50 -47 70 -56 42 -17 171 -38 220 -36 31 2 43
+-10 22 -23 -13 -8 -13 -58 1 -72 14 -14 22 -147 12 -203 -7 -35 -16 -50 -43
+-68 -18 -12 -45 -25 -59 -29 -47 -11 -142 -75 -166 -112 -13 -20 -33 -71 -45
+-113 -18 -66 -19 -83 -9 -116 12 -41 112 -162 133 -162 7 0 23 -11 35 -24 19
+-21 37 -25 144 -35 132 -12 288 -6 382 16 11 3 49 11 85 18 135 29 169 40 200
+70 49 47 89 139 96 223 l7 73 -54 52 c-57 55 -128 85 -168 72 -20 -6 -21 -3
+-21 107 0 62 -3 149 -6 194 l-7 81 44 -3 c24 -1 56 -7 71 -13 15 -6 37 -7 49
+-3 11 5 42 4 68 -2 74 -15 81 -8 81 73 l0 69 -281 2 c-154 0 -370 5 -480 10
+-250 11 -295 25 -368 109 -26 31 -61 82 -78 113 l-31 57 22 14 c11 8 31 17 44
+21 64 21 132 136 132 223 0 66 -19 109 -72 160 -50 49 -96 70 -170 79 -62 7
+-79 -8 -70 -65 5 -33 5 -33 51 -28 57 6 94 -9 144 -58 33 -34 37 -42 37 -89 0
+-69 -35 -125 -94 -149 -66 -27 -94 -26 -110 3 -25 48 -45 95 -48 115 -2 11 -8
+18 -13 15 -12 -6 -8 -73 8 -117 15 -43 5 -50 -39 -27 -90 48 -134 143 -154
+336 -11 104 -11 110 15 199 15 50 38 116 51 145 23 53 98 136 167 188 33 24
+154 59 170 49 5 -3 -4 -19 -20 -37 -56 -60 -104 -136 -85 -136 4 0 21 19 37
+41 17 23 46 55 66 73 30 28 43 33 93 35 33 1 80 6 105 12 153 31 225 39 391
+44 102 3 201 8 220 10 154 19 359 24 540 12 63 -4 151 -9 195 -11 109 -6 288
+-24 355 -37 151 -30 380 -87 395 -99 6 -4 44 -15 85 -24 41 -9 84 -21 95 -26
+11 -5 40 -17 65 -26 41 -15 60 -17 133 -13 41 2 222 -45 241 -62 10 -10 33
+-25 50 -33 17 -8 38 -25 46 -38 25 -39 40 -70 40 -81 0 -6 9 -29 20 -52 11
+-22 22 -54 26 -72 6 -29 4 -31 -32 -37 -22 -3 -53 -6 -70 -6 -17 0 -37 -6 -44
+-15 -7 -8 -22 -15 -34 -15 -28 0 -53 -30 -89 -105 -31 -64 -45 -139 -29 -158
+5 -7 12 -28 16 -47 7 -38 70 -125 99 -135 9 -4 17 -12 17 -19 0 -20 96 -56
+146 -56 39 0 44 -3 44 -22 0 -58 -76 -150 -157 -192 -29 -14 -33 -22 -33 -56
+l0 -40 38 16 c20 9 58 24 84 33 59 22 79 40 106 94 39 77 51 118 46 145 -5 26
+-2 28 71 51 90 29 113 52 175 180 38 78 41 90 46 200 5 90 3 126 -9 159 -42
+121 -171 267 -302 344 -71 41 -92 48 -185 62 -166 24 -362 46 -413 46 -26 0
+-64 6 -84 14 -21 7 -58 19 -82 26 l-44 12 6 66 c13 149 30 261 52 342 37 137
+44 180 40 271 -5 100 -18 163 -46 228 -88 200 -93 209 -130 225 -20 9 -40 15
+-45 15 -5 -1 -29 -5 -54 -9z m68 -90 c34 -18 44 -31 73 -103 32 -77 34 -89 33
+-197 0 -63 -8 -194 -18 -290 -10 -96 -19 -191 -21 -210 -4 -51 -14 -139 -21
+-182 -5 -34 -9 -38 -35 -38 -15 0 -52 9 -81 19 -62 23 -242 60 -343 71 -38 5
+-81 11 -95 14 -22 5 -275 22 -645 42 -60 4 -168 1 -240 -5 -71 -6 -186 -11
+-255 -12 l-124 -1 1 233 c1 259 24 494 51 542 21 36 75 64 139 73 42 5 58 2
+104 -21 107 -55 149 -103 149 -172 0 -17 12 -40 31 -61 25 -27 35 -31 57 -25
+53 15 482 7 662 -12 261 -27 229 -36 265 72 43 132 104 220 175 255 66 33 87
+34 138 8z m845 -1276 c74 -43 160 -112 180 -144 9 -14 28 -38 42 -55 62 -69
+76 -153 50 -280 -25 -120 -102 -243 -162 -260 -26 -7 -24 -18 -27 170 0 61 -5
+116 -9 123 -15 22 -27 13 -16 -12 8 -18 8 -58 1 -145 -6 -67 -14 -126 -17
+-131 -3 -6 -21 -10 -38 -10 -50 0 -180 87 -228 153 l-21 28 27 52 c32 60 50
+75 119 99 44 16 51 16 66 3 9 -8 20 -12 24 -8 10 11 50 12 63 1 7 -5 24 -4 45
+5 l33 14 -52 51 c-40 39 -56 65 -74 117 -29 86 -110 227 -138 241 -53 27 -48
+36 14 29 41 -5 78 -18 118 -41z m-2433 -1124 c36 -5 74 -11 85 -12 18 -3 20
+-12 23 -98 2 -52 6 -147 9 -210 3 -63 6 -144 6 -180 1 -75 19 -108 43 -75 8
+10 14 29 14 41 0 36 15 37 68 4 74 -45 104 -135 66 -198 -22 -38 -116 -91
+-199 -114 -146 -39 -429 -43 -540 -7 -38 11 -104 97 -112 143 -10 65 62 168
+157 222 44 25 62 24 59 -4 -4 -31 20 -74 39 -70 20 4 26 33 41 203 6 66 14
+137 17 158 6 34 4 39 -15 44 -20 5 -21 10 -15 48 7 47 -7 85 -31 85 -8 0 -15
+9 -15 20 0 18 6 19 118 14 64 -2 146 -9 182 -14z m-320 -381 c0 -5 -21 -19
+-47 -31 -94 -42 -190 -160 -210 -258 -7 -36 -22 -48 -34 -29 -13 21 -11 59 8
+109 30 82 66 116 177 169 55 27 102 50 104 50 1 1 2 -4 2 -10z"/>
+<path d="M1865 3365 c-80 -13 -196 -59 -203 -82 -2 -6 8 -19 22 -28 23 -15 27
+-15 65 5 108 54 345 66 366 17 8 -18 18 -22 58 -22 36 0 51 4 58 16 7 14 -1
+25 -42 54 -42 31 -62 39 -122 46 -89 10 -103 10 -202 -6z"/>
+<path d="M2512 3311 c-85 -21 -101 -33 -82 -56 11 -13 26 -15 89 -8 116 11
+214 7 273 -13 62 -20 150 -72 143 -84 -6 -9 43 -20 61 -13 7 3 16 14 20 25 7
+23 -1 31 -97 98 -95 66 -261 87 -407 51z"/>
+<path d="M2305 3250 c-3 -5 -16 -10 -28 -10 -33 0 -86 -36 -92 -63 -7 -26 28
+-108 63 -148 13 -14 45 -37 73 -49 42 -20 52 -22 73 -11 32 18 60 72 53 102
+-17 71 -43 122 -78 154 -41 37 -54 42 -64 25z"/>
+<path d="M2309 2556 c-2 -2 -51 -6 -109 -9 -81 -5 -298 -40 -306 -50 -1 -1 -7
+-69 -13 -152 -9 -131 -8 -169 8 -297 13 -105 16 -162 10 -195 -6 -31 -5 -59 2
+-80 11 -35 16 -38 39 -23 10 6 22 4 38 -6 20 -13 73 -15 349 -14 220 0 332 4
+347 12 32 17 116 111 116 130 0 9 4 19 8 22 5 3 14 29 21 58 12 49 11 57 -12
+108 -28 63 -61 90 -138 116 -67 23 -64 21 -52 36 36 44 28 194 -12 238 -30 33
+-135 87 -193 99 -54 11 -95 14 -103 7z m122 -74 c26 -2 93 -48 98 -67 2 -5 8
+-16 14 -24 27 -32 33 -57 25 -100 -8 -44 -41 -91 -63 -91 -7 0 -20 -9 -30 -20
+-17 -18 -45 -28 -45 -15 0 3 9 15 20 27 28 30 27 98 -1 124 -12 10 -27 31 -35
+46 -21 40 -77 52 -183 39 -117 -14 -161 -28 -161 -49 0 -10 -4 -22 -9 -27 -6
+-6 -13 -29 -17 -51 -6 -39 -4 -43 22 -56 16 -7 35 -25 42 -40 15 -32 48 -41
+152 -42 54 -1 83 4 105 16 43 26 60 24 41 -4 -9 -12 -16 -30 -16 -40 0 -15 -9
+-18 -62 -17 -35 0 -97 0 -138 0 l-75 0 -23 -43 c-18 -32 -23 -55 -20 -92 3
+-45 6 -50 33 -58 50 -15 176 -30 344 -41 19 -2 36 12 73 58 26 32 48 69 48 82
+0 24 -45 59 -87 68 -81 17 -79 17 -58 25 11 4 50 10 86 14 53 6 68 4 78 -8 8
+-9 19 -16 27 -16 7 0 20 -7 28 -16 9 -8 20 -12 26 -9 5 3 10 -3 10 -14 0 -11
+9 -22 20 -26 17 -5 19 -12 13 -53 -7 -51 -36 -102 -59 -102 -8 0 -25 -7 -37
+-15 -12 -8 -31 -14 -42 -13 -11 1 -49 -8 -85 -19 -36 -11 -96 -21 -133 -22
+-37 -1 -71 -2 -75 -3 -4 -1 -38 2 -77 5 -38 4 -92 10 -118 12 -27 2 -72 9
+-102 15 -44 9 -52 14 -48 30 4 17 8 17 39 4 42 -17 44 -17 44 1 0 8 -7 15 -16
+15 -8 0 -22 16 -30 36 -22 53 -45 312 -36 423 l7 94 55 19 c30 10 80 21 110
+24 30 3 78 9 105 13 46 6 152 8 216 3z m-81 -177 c0 -9 -10 -15 -27 -16 -16
+-1 -45 -2 -65 -3 -30 -2 -36 0 -27 10 10 12 37 18 97 22 14 1 22 -4 22 -13z
+m-136 -84 c11 -16 -27 -22 -43 -6 -14 13 -13 15 11 15 15 0 29 -4 32 -9z m122
+-8 c-11 -11 -95 -12 -102 -2 -3 5 21 9 52 9 32 0 54 -3 50 -7z m-3 -222 c16
+-6 39 -11 51 -11 13 0 29 -6 35 -14 10 -12 8 -17 -8 -25 -25 -14 -47 -15 -146
+-6 -78 8 -115 24 -115 51 0 7 6 14 13 17 20 8 140 -1 170 -12z"/>
+<path d="M716 2424 c-3 -9 -6 -33 -6 -54 0 -21 -4 -41 -8 -44 -12 -7 -37 -174
+-28 -183 13 -13 26 21 26 68 0 26 7 65 15 88 20 57 30 141 17 141 -5 0 -13 -7
+-16 -16z"/>
+</g>
+
+    </svg>
+  </g>
+
+  <!-- Evolution Banner -->
+  <g transform="translate(45, 495)">
+    <rect x="0" y="0" width="510" height="28" rx="6" fill="#F0F0F0" />
+    <text x="15" y="18" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="700" fill="#616161">Evolves into: Bedrsar → Snordabed</text>
+  </g>
+
+  <!-- Moves & Concept Abilities -->
+  <g transform="translate(45, 540)">
+    <!-- Concept Attack 1 -->
+    <circle cx="16" cy="16" r="14" fill="#BDBDBD" />
+    <circle cx="16" cy="16" r="6" fill="#FFFFFF" />
+    <text x="40" y="21" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="18" font-weight="800" fill="#212121">Original Concept</text>
+    <text x="510" y="21" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="18" font-weight="800" fill="#212121" text-anchor="end">40+</text>
+    <text x="40" y="42" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="500" fill="#616161">Hand-drawn authentic archive concept. Traced as scalable vector.</text>
+    
+    <line x1="0" y1="58" x2="510" y2="58" stroke="#E0E0E0" stroke-width="1" />
+
+    <!-- Move 2 -->
+    <circle cx="16" cy="85" r="14" fill="#BDBDBD" />
+    <circle cx="48" cy="85" r="14" fill="#424242" />
+    <text x="75" y="90" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="18" font-weight="800" fill="#212121">Bedder Surge</text>
+    <text x="510" y="90" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="18" font-weight="800" fill="#212121" text-anchor="end">80</text>
+    <text x="75" y="110" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-style="italic" fill="#616161">Sleepy slumber pillow creature</text>
+  </g>
+
+  <!-- Bottom Stats / Footer -->
+  <g transform="translate(45, 720)">
+    <line x1="0" y1="0" x2="510" y2="0" stroke="#BDBDBD" stroke-width="2" opacity="0.3" />
+    
+    <text x="30" y="22" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" font-weight="700" fill="#757575">WEAKNESS</text>
+    <text x="210" y="22" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" font-weight="700" fill="#757575">RESISTANCE</text>
+    <text x="400" y="22" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" font-weight="700" fill="#757575">RETREAT</text>
+
+    <circle cx="30" cy="40" r="10" fill="#EF5350" />
+    <text x="46" y="44" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="800" fill="#212121">×2</text>
+
+    <circle cx="210" cy="40" r="10" fill="#78909C" />
+    <text x="226" y="44" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="800" fill="#212121">-20</text>
+
+    <circle cx="400" cy="40" r="10" fill="#BDBDBD" />
+    <circle cx="425" cy="40" r="10" fill="#BDBDBD" />
+
+    <text x="255" y="78" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" font-weight="700" fill="#9E9E9E" text-anchor="middle">© Pocket Monster Concepts Archive • Vector Edition 2026</text>
+  </g>
+</svg>

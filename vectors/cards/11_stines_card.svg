@@ -1,0 +1,151 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 850" width="600" height="850">
+  <defs>
+    <linearGradient id="cardBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F3E5F5" />
+      <stop offset="50%" stop-color="#FFFFFF" />
+      <stop offset="100%" stop-color="#F3E5F5" />
+    </linearGradient>
+    <linearGradient id="foilBorder" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4A148C" />
+      <stop offset="30%" stop-color="#AB47BC" />
+      <stop offset="70%" stop-color="#FFD700" />
+      <stop offset="100%" stop-color="#AB47BC" />
+    </linearGradient>
+    <linearGradient id="bannerGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#AB47BC" />
+      <stop offset="100%" stop-color="#4A148C" />
+    </linearGradient>
+    <filter id="cardShadow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-opacity="0.25" flood-color="#000000" />
+    </filter>
+    <filter id="artShadow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="2" stdDeviation="4" flood-opacity="0.15" />
+    </filter>
+  </defs>
+
+  <!-- Card Base -->
+  <rect x="15" y="15" width="570" height="820" rx="28" fill="url(#foilBorder)" filter="url(#cardShadow)" />
+  <rect x="25" y="25" width="550" height="800" rx="22" fill="url(#cardBg)" />
+  <rect x="32" y="32" width="536" height="786" rx="18" fill="none" stroke="#AB47BC" stroke-width="2" opacity="0.4" />
+
+  <!-- Top Header Bar -->
+  <g transform="translate(45, 45)">
+    <text x="0" y="22" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="700" fill="#4A148C" letter-spacing="1">BASIC POKÉMON</text>
+    <text x="0" y="52" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="28" font-weight="900" fill="#212121">Stines</text>
+    
+    <!-- HP -->
+    <text x="440" y="48" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="14" font-weight="800" fill="#4A148C">HP</text>
+    <text x="465" y="50" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="24" font-weight="900" fill="#212121">100</text>
+  </g>
+
+  <!-- Type Badges -->
+  <g transform="translate(45, 105)">
+    <rect x="0" y="0" width="95" height="24" rx="12" fill="#AB47BC" />
+    <text x="47.5" y="16" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="800" fill="#FFFFFF" text-anchor="middle">POISON</text>
+    
+    
+    
+    <text x="510" y="16" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="700" fill="#757575" text-anchor="end">NO. 11 / 42</text>
+  </g>
+
+  <!-- Illustration Frame -->
+  <g transform="translate(45, 140)">
+    <rect x="0" y="0" width="510" height="340" rx="16" fill="#FFFFFF" stroke="#4A148C" stroke-width="3" filter="url(#artShadow)" />
+    <rect x="6" y="6" width="498" height="328" rx="12" fill="#F3E5F5" opacity="0.3" />
+    <circle cx="255" cy="170" r="130" fill="#F3E5F5" opacity="0.5" />
+    
+    <!-- Embedded Traced Creature SVG -->
+    <svg x="20" y="15" width="470" height="310" viewBox="0 0 351.000000 259.000000" preserveAspectRatio="xMidYMid meet">
+      <g transform="translate(0.000000,259.000000) scale(0.100000,-0.100000)"
+fill="#000000" stroke="none">
+<path d="M1122 2563 c-6 -16 -13 -54 -16 -87 -4 -32 -11 -66 -16 -76 -6 -10
+-10 -36 -10 -57 1 -35 2 -36 15 -20 7 11 25 55 39 99 14 44 30 87 35 96 4 9
+11 29 15 45 6 25 4 27 -23 27 -22 0 -31 -6 -39 -27z"/>
+<path d="M1536 2568 c-8 -13 -22 -41 -31 -62 -16 -37 -16 -41 0 -52 20 -15 41
+-9 48 14 3 9 19 41 36 70 l31 52 -35 0 c-25 0 -39 -6 -49 -22z"/>
+<path d="M1507 2151 c-37 -10 -84 -30 -105 -44 -20 -14 -63 -38 -94 -53 -32
+-16 -58 -33 -58 -39 0 -5 -26 -21 -56 -35 -31 -14 -66 -35 -78 -47 -11 -13
+-26 -23 -32 -23 -6 0 -21 -12 -35 -26 -21 -23 -22 -28 -8 -37 14 -9 12 -16
+-15 -57 -17 -26 -39 -60 -48 -76 -10 -16 -22 -36 -27 -44 -6 -8 -26 -49 -44
+-90 -32 -70 -51 -96 -153 -210 -22 -25 -58 -70 -79 -100 -22 -30 -65 -85 -97
+-123 -32 -37 -58 -74 -58 -81 0 -7 -8 -24 -18 -37 -29 -37 -71 -150 -78 -210
+-9 -75 19 -177 84 -307 10 -19 36 -43 62 -58 44 -25 49 -25 265 -26 139 -1
+240 3 275 11 84 18 377 38 445 29 113 -14 705 -10 817 6 57 8 130 17 163 20
+68 7 154 33 204 62 19 10 64 46 100 78 36 33 88 76 114 97 47 37 114 113 150
+169 17 26 16 29 -4 76 -32 73 -149 222 -224 284 -88 73 -122 126 -130 198 -3
+31 -19 115 -35 186 -26 110 -37 139 -75 195 -24 36 -62 81 -84 99 l-40 32
+-178 10 c-210 11 -249 16 -285 41 -14 11 -32 19 -40 19 -7 0 -24 9 -38 20 -14
+11 -31 20 -38 20 -7 0 -28 11 -45 24 -36 27 -160 58 -252 62 -37 2 -86 -4
+-128 -15z m288 -59 c33 -11 100 -41 149 -67 159 -84 190 -92 377 -98 123 -4
+174 -9 197 -21 36 -19 81 -71 110 -130 25 -49 67 -206 77 -286 15 -126 42
+-171 182 -303 76 -73 183 -211 183 -237 0 -13 -78 -120 -88 -120 -4 0 -42 -34
+-85 -75 -83 -80 -161 -141 -215 -169 -57 -29 -182 -55 -332 -66 -146 -12 -707
+-8 -840 6 -73 8 -319 -10 -459 -33 -141 -23 -433 -4 -490 32 -15 9 -45 68 -77
+152 -22 57 -25 78 -19 131 8 85 80 234 148 304 7 7 30 38 52 68 22 30 81 102
+131 159 71 80 105 129 146 210 94 188 153 262 292 372 29 23 146 84 175 92 35
+9 15 29 -22 22 l-32 -6 25 20 c14 11 31 21 38 21 7 0 23 6 35 12 75 43 231 47
+342 10z"/>
+<path d="M1493 1740 c-34 -15 -144 -127 -154 -157 -16 -47 -276 -335 -365
+-404 -202 -156 -284 -239 -284 -287 0 -10 9 -27 20 -37 20 -18 20 -17 20 22 0
+35 6 46 48 85 26 24 73 63 104 86 52 38 148 126 303 277 34 33 101 113 149
+177 87 116 174 206 198 205 63 -2 79 21 29 40 -23 8 -37 7 -68 -7z"/>
+<path d="M2276 1582 c-8 -14 7 -29 45 -45 19 -8 53 -30 73 -48 l39 -33 -8 -71
+c-19 -159 -4 -217 83 -323 53 -65 251 -244 265 -239 21 7 18 31 -5 54 -40 38
+-114 106 -165 154 -27 25 -67 74 -89 110 l-39 64 3 137 3 138 -38 36 c-56 53
+-151 91 -167 66z"/>
+<path d="M1435 794 c-22 -8 -44 -19 -49 -24 -6 -6 -17 -10 -26 -10 -9 0 -55
+-16 -103 -35 -48 -19 -104 -35 -124 -35 -38 -1 -73 -18 -73 -38 0 -15 49 -24
+106 -18 44 4 194 56 219 76 6 5 33 16 60 26 51 17 173 15 198 -3 52 -38 193
+-58 263 -37 37 11 185 29 309 38 32 3 67 -3 100 -15 50 -19 73 -14 62 14 -9
+25 -147 50 -234 43 -169 -14 -190 -17 -243 -30 -86 -21 -132 -14 -255 38 -69
+29 -147 33 -210 10z"/>
+</g>
+
+    </svg>
+  </g>
+
+  <!-- Evolution Banner -->
+  <g transform="translate(45, 495)">
+    <rect x="0" y="0" width="510" height="28" rx="6" fill="#F0F0F0" />
+    <text x="15" y="18" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="700" fill="#616161">Single Stage Pokémon</text>
+  </g>
+
+  <!-- Moves & Concept Abilities -->
+  <g transform="translate(45, 540)">
+    <!-- Concept Attack 1 -->
+    <circle cx="16" cy="16" r="14" fill="#AB47BC" />
+    <circle cx="16" cy="16" r="6" fill="#FFFFFF" />
+    <text x="40" y="21" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="18" font-weight="800" fill="#212121">Original Concept</text>
+    <text x="510" y="21" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="18" font-weight="800" fill="#212121" text-anchor="end">40+</text>
+    <text x="40" y="42" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="500" fill="#616161">Hand-drawn authentic archive concept. Traced as scalable vector.</text>
+    
+    <line x1="0" y1="58" x2="510" y2="58" stroke="#E0E0E0" stroke-width="1" />
+
+    <!-- Move 2 -->
+    <circle cx="16" cy="85" r="14" fill="#AB47BC" />
+    <circle cx="48" cy="85" r="14" fill="#4A148C" />
+    <text x="75" y="90" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="18" font-weight="800" fill="#212121">Stines Surge</text>
+    <text x="510" y="90" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="18" font-weight="800" fill="#212121" text-anchor="end">80</text>
+    <text x="75" y="110" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-style="italic" fill="#616161">Toxic venomous stinger creature</text>
+  </g>
+
+  <!-- Bottom Stats / Footer -->
+  <g transform="translate(45, 720)">
+    <line x1="0" y1="0" x2="510" y2="0" stroke="#AB47BC" stroke-width="2" opacity="0.3" />
+    
+    <text x="30" y="22" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" font-weight="700" fill="#757575">WEAKNESS</text>
+    <text x="210" y="22" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" font-weight="700" fill="#757575">RESISTANCE</text>
+    <text x="400" y="22" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" font-weight="700" fill="#757575">RETREAT</text>
+
+    <circle cx="30" cy="40" r="10" fill="#EF5350" />
+    <text x="46" y="44" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="800" fill="#212121">×2</text>
+
+    <circle cx="210" cy="40" r="10" fill="#78909C" />
+    <text x="226" y="44" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="800" fill="#212121">-20</text>
+
+    <circle cx="400" cy="40" r="10" fill="#BDBDBD" />
+    <circle cx="425" cy="40" r="10" fill="#BDBDBD" />
+
+    <text x="255" y="78" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" font-weight="700" fill="#9E9E9E" text-anchor="middle">© Pocket Monster Concepts Archive • Vector Edition 2026</text>
+  </g>
+</svg>

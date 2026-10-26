@@ -1,0 +1,380 @@
+[
+  {
+    "id": 1,
+    "name": "Ryeloaf",
+    "primary_type": "Fairy",
+    "secondary_type": null,
+    "ev1": "Berkery",
+    "ev2": "Kneeden",
+    "notes": "Bread loaf fairy creature"
+  },
+  {
+    "id": 2,
+    "name": "Flocicle",
+    "primary_type": "Water",
+    "secondary_type": "Ice",
+    "ev1": null,
+    "ev2": null,
+    "notes": "Icicle/water flow creature"
+  },
+  {
+    "id": 3,
+    "name": "Pholeap",
+    "primary_type": "Bug",
+    "secondary_type": null,
+    "ev1": "Jiglon",
+    "ev2": null,
+    "notes": "Leaping bug concept"
+  },
+  {
+    "id": 4,
+    "name": "Scribs",
+    "primary_type": "Electric",
+    "secondary_type": null,
+    "ev1": "Stato",
+    "ev2": "Flowstat",
+    "notes": "Static charge creature"
+  },
+  {
+    "id": 5,
+    "name": "Firenado",
+    "primary_type": "Fire",
+    "secondary_type": null,
+    "ev1": "Flamenado",
+    "ev2": "Infernado",
+    "notes": "Vortex flame cyclone"
+  },
+  {
+    "id": 6,
+    "name": "Floatson",
+    "primary_type": "Normal",
+    "secondary_type": "Water",
+    "ev1": "Floatmore",
+    "ev2": "Floatarey",
+    "notes": "Buoyant floating creature"
+  },
+  {
+    "id": 7,
+    "name": "Puku",
+    "primary_type": "Fairy",
+    "secondary_type": "Fighting",
+    "ev1": "Pillicka",
+    "ev2": null,
+    "notes": "Boxer puck creature (Dated 4/1/2010)"
+  },
+  {
+    "id": 8,
+    "name": "Stinsketto",
+    "primary_type": "Bug",
+    "secondary_type": "Poison",
+    "ev1": null,
+    "ev2": null,
+    "notes": "Stink mosquito concept (Dated 10-5-10)"
+  },
+  {
+    "id": 9,
+    "name": "Leatherind",
+    "primary_type": "Normal",
+    "secondary_type": "Dragon",
+    "ev1": null,
+    "ev2": null,
+    "notes": "Leathery dragon hide beast"
+  },
+  {
+    "id": 10,
+    "name": "Glaciator",
+    "primary_type": "Ice",
+    "secondary_type": "Fighting",
+    "ev1": "Freezard",
+    "ev2": null,
+    "notes": "Alligator gladiator with ice crystals"
+  },
+  {
+    "id": 11,
+    "name": "Stines",
+    "primary_type": "Poison",
+    "secondary_type": null,
+    "ev1": null,
+    "ev2": null,
+    "notes": "Toxic venomous stinger creature"
+  },
+  {
+    "id": 12,
+    "name": "Nipecoon",
+    "primary_type": "Normal",
+    "secondary_type": null,
+    "ev1": null,
+    "ev2": null,
+    "notes": "Cocoon/raccoon hybrid creature"
+  },
+  {
+    "id": 13,
+    "name": "Fizzsprits",
+    "primary_type": "Fairy",
+    "secondary_type": "Water",
+    "ev1": "Fizzaroo",
+    "ev2": "Foamdoma",
+    "notes": "Effervescent fizz fairy"
+  },
+  {
+    "id": 14,
+    "name": "Drincup",
+    "primary_type": "Water",
+    "secondary_type": null,
+    "ev1": "Spillsplash",
+    "ev2": "Soakrack",
+    "notes": "Quiet but excitable"
+  },
+  {
+    "id": 15,
+    "name": "Bandiqui",
+    "primary_type": "Bug",
+    "secondary_type": "Dark",
+    "ev1": "Thievaity",
+    "ev2": null,
+    "notes": "Bandit bug thief"
+  },
+  {
+    "id": 16,
+    "name": "Craykee",
+    "primary_type": "Steel",
+    "secondary_type": null,
+    "ev1": null,
+    "ev2": null,
+    "notes": "Metallic key/crane mechanism"
+  },
+  {
+    "id": 17,
+    "name": "Mussin",
+    "primary_type": "Fairy",
+    "secondary_type": "Normal",
+    "ev1": "Bushinch",
+    "ev2": null,
+    "notes": "Fluffy moss/bush sprite"
+  },
+  {
+    "id": 18,
+    "name": "Elelunt",
+    "primary_type": "Ghost",
+    "secondary_type": "Normal",
+    "ev1": "Elejint",
+    "ev2": "Mamotuff",
+    "notes": "Haunted pachyderm mammoth"
+  },
+  {
+    "id": 19,
+    "name": "Acesheba",
+    "primary_type": "Normal",
+    "secondary_type": null,
+    "ev1": "Aceruner",
+    "ev2": null,
+    "notes": "Swift runner canine"
+  },
+  {
+    "id": 20,
+    "name": "Frightnite",
+    "primary_type": "Ghost",
+    "secondary_type": null,
+    "ev1": "Frightlite",
+    "ev2": "Nite Lite",
+    "notes": "Corner nocturnal apparitions"
+  },
+  {
+    "id": 21,
+    "name": "Konetoad",
+    "primary_type": "Water",
+    "secondary_type": "Ground",
+    "ev1": null,
+    "ev2": null,
+    "notes": "Cone-shelled amphibian toad"
+  },
+  {
+    "id": 22,
+    "name": "Floopy Jr.",
+    "primary_type": "Normal",
+    "secondary_type": null,
+    "ev1": null,
+    "ev2": null,
+    "notes": "Cheerful shapeless blob"
+  },
+  {
+    "id": 23,
+    "name": "Rosewall",
+    "primary_type": "Grass",
+    "secondary_type": null,
+    "ev1": null,
+    "ev2": null,
+    "notes": "Floral barrier blossom"
+  },
+  {
+    "id": 24,
+    "name": "Shinecloud",
+    "primary_type": "Fire",
+    "secondary_type": "Electric",
+    "ev1": "Funzap",
+    "ev2": "Funderstorm",
+    "notes": "Playful and mischievous"
+  },
+  {
+    "id": 25,
+    "name": "Yourbee",
+    "primary_type": "Grass",
+    "secondary_type": "Bug",
+    "ev1": "Yourdrone",
+    "ev2": "Youroyale",
+    "notes": "Happy but quick to anger"
+  },
+  {
+    "id": 26,
+    "name": "Zeebean",
+    "primary_type": "Fighting",
+    "secondary_type": "Electric",
+    "ev1": "Zeepod",
+    "ev2": "Sproutbout",
+    "notes": "Energetic bean fighter"
+  },
+  {
+    "id": 27,
+    "name": "Zowzahorn",
+    "primary_type": "Fairy",
+    "secondary_type": "Dragon",
+    "ev1": "Drumiss",
+    "ev2": "Zowzaband",
+    "notes": "Musical seahorse trumpet (Fairy/Dragon/Water)"
+  },
+  {
+    "id": 28,
+    "name": "Sir Pressur",
+    "primary_type": "Steel",
+    "secondary_type": null,
+    "ev1": null,
+    "ev2": null,
+    "notes": "Armored pressure knight"
+  },
+  {
+    "id": 29,
+    "name": "Mushroot",
+    "primary_type": "Grass",
+    "secondary_type": null,
+    "ev1": null,
+    "ev2": null,
+    "notes": "Fungal spore root"
+  },
+  {
+    "id": 30,
+    "name": "Nosesniffa",
+    "primary_type": "Normal",
+    "secondary_type": "Flying",
+    "ev1": "Achooket",
+    "ev2": "Lucisnuff",
+    "notes": "Keen-scented avian"
+  },
+  {
+    "id": 31,
+    "name": "Lockit",
+    "primary_type": "Steel",
+    "secondary_type": null,
+    "ev1": null,
+    "ev2": null,
+    "notes": "Padlock fortress guardian"
+  },
+  {
+    "id": 32,
+    "name": "Shardu",
+    "primary_type": "Rock",
+    "secondary_type": "Steel",
+    "ev1": "Shardthrew",
+    "ev2": "Shardpoon",
+    "notes": "Geometric crystal shard entity"
+  },
+  {
+    "id": 33,
+    "name": "Smile",
+    "primary_type": "Normal",
+    "secondary_type": "Fairy",
+    "ev1": "Emozs",
+    "ev2": null,
+    "notes": "Joyful emotion expression creature"
+  },
+  {
+    "id": 34,
+    "name": "Battlelite",
+    "primary_type": "Steel",
+    "secondary_type": "Fighting",
+    "ev1": null,
+    "ev2": null,
+    "notes": "Combat automaton warrior"
+  },
+  {
+    "id": 35,
+    "name": "Bedder",
+    "primary_type": "Normal",
+    "secondary_type": null,
+    "ev1": "Bedrsar",
+    "ev2": "Snordabed",
+    "notes": "Sleepy slumber pillow creature"
+  },
+  {
+    "id": 36,
+    "name": "Grarepatch",
+    "primary_type": "Grass",
+    "secondary_type": null,
+    "ev1": "Hopiow",
+    "ev2": "Basebun",
+    "notes": "Meadow patch rabbit creature"
+  },
+  {
+    "id": 37,
+    "name": "Plastisteel",
+    "primary_type": "Steel",
+    "secondary_type": null,
+    "ev1": "Amalgamate",
+    "ev2": null,
+    "notes": "Malleable synthetic metal alloy"
+  },
+  {
+    "id": 38,
+    "name": "Snarcor",
+    "primary_type": "Rock",
+    "secondary_type": "Psychic",
+    "ev1": null,
+    "ev2": null,
+    "notes": "Mystic mineral psychic"
+  },
+  {
+    "id": 39,
+    "name": "Jointremel",
+    "primary_type": "Fairy",
+    "secondary_type": "Normal",
+    "ev1": "Nottied",
+    "ev2": null,
+    "notes": "Ribbon tied pretzel fairy"
+  },
+  {
+    "id": 40,
+    "name": "Clownini",
+    "primary_type": "Psychic",
+    "secondary_type": "Ghost",
+    "ev1": null,
+    "ev2": null,
+    "notes": "Phantom jester apparition"
+  },
+  {
+    "id": 41,
+    "name": "Potlee",
+    "primary_type": "Ground",
+    "secondary_type": "Grass",
+    "ev1": "Baysprout",
+    "ev2": null,
+    "notes": "Earthen pot sproutling"
+  },
+  {
+    "id": 42,
+    "name": "Brufru",
+    "primary_type": "Fairy",
+    "secondary_type": "Grass",
+    "ev1": "Fruchew",
+    "ev2": "Chuthrou",
+    "notes": "Sweet berry fruit fairy"
+  }
+]
