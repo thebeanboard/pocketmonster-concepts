@@ -376,5 +376,275 @@
     "ev1": "Fruchew",
     "ev2": "Chuthrou",
     "notes": "Sweet berry fruit fairy"
+  },
+  {
+    "id": 43,
+    "name": "Freshtin",
+    "primary_type": "Steel",
+    "secondary_type": null,
+    "ev1": null,
+    "ev2": null,
+    "hp": 80,
+    "stage": "Basic Pok\u00e9mon",
+    "moves": [
+      {
+        "name": "Nibble",
+        "damage": "40+",
+        "description": "Flip a coin. If heads, opponent takes 30 more damage."
+      },
+      {
+        "name": "Quick Wit",
+        "damage": "40",
+        "description": "Flip a coin. If heads, the Defending Pok\u00e9mon is now Paralyzed."
+      }
+    ],
+    "weakness": "Fire (x2)",
+    "resistance": "Psychic (-20)",
+    "retreat": 1,
+    "source": "Homemade Pok\u00e9mon Cards (Jan 1, 2020)",
+    "notes": "Quick-witted loaf creature with playful antennae and segmented body"
+  },
+  {
+    "id": 44,
+    "name": "Tridog",
+    "primary_type": "Normal",
+    "secondary_type": null,
+    "ev1": null,
+    "ev2": null,
+    "hp": 90,
+    "stage": "Basic Pok\u00e9mon",
+    "moves": [
+      {
+        "name": "Three ears",
+        "damage": "30+",
+        "description": "Flip a coin. If heads add 10 damage to this attack."
+      },
+      {
+        "name": "Dog food",
+        "damage": "Heal 10",
+        "description": "Heal 10 damage from this Pok\u00e9mon."
+      }
+    ],
+    "weakness": "Fire (x2)",
+    "resistance": null,
+    "retreat": 1,
+    "source": "Homemade Pok\u00e9mon Cards (Jan 1, 2020)",
+    "notes": "Playful triple-eared hound with high spirits and a healthy appetite"
+  },
+  {
+    "id": 45,
+    "name": "Rokoot",
+    "primary_type": "Steel",
+    "secondary_type": null,
+    "ev1": null,
+    "ev2": null,
+    "hp": 200,
+    "stage": "Basic Pok\u00e9mon",
+    "moves": [
+      {
+        "name": "Lazer",
+        "damage": "80+",
+        "description": "Flip a coin. If heads add 10 damage to this attack."
+      },
+      {
+        "name": "Drilling",
+        "damage": "120",
+        "description": "Powerful spiral drill attack that pierces through defense."
+      }
+    ],
+    "weakness": "Fighting (x2)",
+    "resistance": "Psychic (-20)",
+    "retreat": 1,
+    "source": "Homemade Pok\u00e9mon Cards (Jan 1, 2020)",
+    "notes": "Avian automaton with high-powered laser optic and heavy spiral drill arm"
+  },
+  {
+    "id": 46,
+    "name": "Squigglebug",
+    "primary_type": "Bug",
+    "secondary_type": "Grass",
+    "ev1": null,
+    "ev2": null,
+    "hp": 50,
+    "stage": "Basic Pok\u00e9mon",
+    "moves": [
+      {
+        "name": "Poison",
+        "damage": "20",
+        "description": "Your opponent's active Pok\u00e9mon is now poisoned."
+      },
+      {
+        "name": "Disasteris Squiggles",
+        "damage": "200",
+        "description": "Unleashes an overwhelming swarm of chaotic squiggles."
+      }
+    ],
+    "weakness": "Fire (x2)",
+    "resistance": null,
+    "retreat": 1,
+    "source": "Homemade Pok\u00e9mon Cards (Jan 1, 2020)",
+    "notes": "Mischievous squiggling insect whose chaotic movements confound opponents"
+  },
+  {
+    "id": 47,
+    "name": "Grallaper",
+    "primary_type": "Psychic",
+    "secondary_type": null,
+    "ev1": null,
+    "ev2": null,
+    "hp": 80,
+    "stage": "Base Pok\u00e9mon",
+    "moves": [
+      {
+        "name": "Bone Stomp",
+        "damage": "50",
+        "description": "The Pok\u00e9mon uses its full body weight to crush the opponent."
+      },
+      {
+        "name": "Rattling Leap",
+        "damage": "10",
+        "description": "Damage and skip opponent's turn if they have under 50 health left."
+      }
+    ],
+    "weakness": "Dark (x2)",
+    "resistance": "Fighting (-40)",
+    "retreat": 1,
+    "source": "Homemade Pok\u00e9mon Cards (Jan 1, 2020)",
+    "notes": "Geometric skeleton quadruped capable of heavy crushing stomps and staggering leaps"
+  },
+  {
+    "id": 48,
+    "name": "Rangoph",
+    "primary_type": "Grass",
+    "secondary_type": "Ground",
+    "ev1": null,
+    "ev2": null,
+    "hp": 70,
+    "stage": "Basic Pok\u00e9mon",
+    "moves": [
+      {
+        "name": "Wood Tooth",
+        "damage": "60",
+        "description": "Ineffective if the opponent does not have a solid body."
+      },
+      {
+        "name": "Fenced In",
+        "damage": "10x",
+        "description": "Pok\u00e9mon builds a structure and launches attacks from higher ground."
+      }
+    ],
+    "weakness": "Fire (x2)",
+    "resistance": "Water (-20)",
+    "retreat": 1,
+    "source": "Homemade Pok\u00e9mon Cards (Jan 1, 2020)",
+    "notes": "Timber-chewing architect beast that constructs defensive wooden barricades"
+  },
+  {
+    "id": 49,
+    "name": "Notsakiat",
+    "primary_type": "Electric",
+    "secondary_type": null,
+    "ev1": null,
+    "ev2": null,
+    "hp": 80,
+    "stage": "Basic Pok\u00e9mon",
+    "moves": [
+      {
+        "name": "Static Tangle",
+        "damage": "50",
+        "description": "Opponent is paralyzed 2 turns if leading digit of remaining HP is odd."
+      },
+      {
+        "name": "Knot Strike",
+        "damage": "30",
+        "description": "Lashes out with high-voltage coiled knot tail."
+      }
+    ],
+    "weakness": "Grass (x2)",
+    "resistance": null,
+    "retreat": 2,
+    "source": "Homemade Pok\u00e9mon Cards (Jan 1, 2020)",
+    "notes": "Feline static generator with an intricate conductive knot tail"
+  },
+  {
+    "id": 50,
+    "name": "Ebo",
+    "primary_type": "Fairy",
+    "secondary_type": null,
+    "ev1": null,
+    "ev2": null,
+    "hp": 110,
+    "stage": "Basic Pok\u00e9mon",
+    "moves": [
+      {
+        "name": "Magic Sneeze",
+        "damage": "70",
+        "description": "Flip coin. If heads, opponent's last chosen attack is deactivated & reflected."
+      },
+      {
+        "name": "Dusty Mess",
+        "damage": "10",
+        "description": "The opponent is dirtied for one turn."
+      }
+    ],
+    "weakness": "Steel (x2)",
+    "resistance": "Dark (-20)",
+    "retreat": 1,
+    "source": "Homemade Pok\u00e9mon Cards (Jan 1, 2020)",
+    "notes": "Whimsical tiny fairy sprite whose sneezing discharges unpredictable reversal magic"
+  },
+  {
+    "id": 51,
+    "name": "Wattery",
+    "primary_type": "Water",
+    "secondary_type": null,
+    "ev1": null,
+    "ev2": null,
+    "hp": 60,
+    "stage": "Base Pok\u00e9mon",
+    "moves": [
+      {
+        "name": "Body Splash",
+        "damage": "60",
+        "description": "2x against a fire type. The opponent is dirtied for one turn."
+      },
+      {
+        "name": "Droplet Dash",
+        "damage": "20",
+        "description": "Quick splash tackle using floating auxiliary droplets."
+      }
+    ],
+    "weakness": "Electric (x2)",
+    "resistance": "Fire (-20)",
+    "retreat": 1,
+    "source": "Homemade Pok\u00e9mon Cards (Jan 1, 2020)",
+    "notes": "Expressive sentient water droplet surrounded by floating auxiliary splash orbs"
+  },
+  {
+    "id": 52,
+    "name": "Vibrastalk",
+    "primary_type": "Grass",
+    "secondary_type": null,
+    "ev1": null,
+    "ev2": null,
+    "hp": 90,
+    "stage": "Base Pok\u00e9mon",
+    "moves": [
+      {
+        "name": "Quiverquake",
+        "damage": "80",
+        "description": "Inflicts 10 damage on the Pok\u00e9mon with each use."
+      },
+      {
+        "name": "Poke",
+        "damage": "20",
+        "description": "A sharp vibrational jab delivered at resonant frequency."
+      }
+    ],
+    "weakness": "Fire (x2)",
+    "resistance": "Water (-20)",
+    "retreat": 1,
+    "source": "Homemade Pok\u00e9mon Cards (Jan 1, 2020)",
+    "notes": "Resonant flora tuning fork that vibrates to produce disorienting acoustic waves"
   }
 ]

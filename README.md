@@ -1,9 +1,11 @@
 # Pokémon Concepts Vector Archive
 
 [![GitHub Pages](https://img.shields.io/badge/Live%20Demo-GitHub%20Pages-blue?style=flat-square&logo=github)](https://thebeanboard.github.io/pocketmonster-concepts/)
-[![Vectors](https://img.shields.io/badge/Vectors-126%20SVGs-green?style=flat-square)](https://thebeanboard.github.io/pocketmonster-concepts/)
+[![Vectors](https://img.shields.io/badge/Vectors-156%20SVGs-green?style=flat-square)](https://thebeanboard.github.io/pocketmonster-concepts/)
 
-A complete, high-fidelity vector restoration of all 42 original hand-drawn Pokémon concepts from the scan archive (`Pokémon Concepts Scan Jun 23, 2020 at 7.16 PM.pdf`).
+A complete, high-fidelity vector restoration of all 52 hand-drawn Pokémon concepts from the scan archives:
+- **Original Sketchbook Concepts:** `Pokémon Concepts Scan Jun 23, 2020 at 7.16 PM.pdf` (Entries 01–42)
+- **Homemade Pokémon Cards:** `Homemade Pokemon Cards Scan Jan 1, 2020 at 6.12 PM.pdf` (Entries 43–52)
 
 **Live Archive Gallery:** [https://thebeanboard.github.io/pocketmonster-concepts/](https://thebeanboard.github.io/pocketmonster-concepts/)
 
@@ -11,31 +13,37 @@ A complete, high-fidelity vector restoration of all 42 original hand-drawn Poké
 
 ```
 pocketmonster-concepts/
-├── index.html                  # Interactive vector gallery viewer
-├── pokemon_metadata.json       # Structured metadata for all 42 concepts
-├── build_vectors.swift         # Vector generation & morphological extraction pipeline
-├── vectors/
-│   ├── cards/                  # 42 Pokémon Trading Card vector SVGs
-│   │   ├── 01_ryeloaf_card.svg
-│   │   ├── 02_flocicle_card.svg
-│   │   └── ... (42 files)
-│   ├── creatures/              # 42 Isolated Pokémon creature vector SVGs
-│   │   ├── 01_ryeloaf_creature.svg
-│   │   ├── 02_flocicle_creature.svg
-│   │   └── ... (42 files)
-│   └── concepts/               # 42 Restored hand-drawn concept sheet SVGs
-│       ├── 01_ryeloaf.svg
-│       ├── 02_flocicle.svg
-│       └── ... (42 files)
+├── index.html                                          # Interactive vector gallery viewer
+├── pokemon_metadata.json                               # Structured metadata for all 52 concepts
+├── build_vectors.swift                                 # Unified vector generation & morphology extraction pipeline
+├── generate_homemade_cards.swift                       # Homemade cards vector generation pipeline
+├── Pokémon Concepts Scan Jun 23, 2020 at 7.16 PM.pdf   # 42 original hand-drawn concepts
+├── Homemade Pokemon Cards Scan Jan 1, 2020 at 6.12 PM.pdf # 10 homemade card drawings + card templates
+└── vectors/
+    ├── cards/                                          # 52 Pokémon Trading Card vector SVGs
+    │   ├── 01_ryeloaf_card.svg
+    │   ├── ...
+    │   ├── 43_freshtin_card.svg
+    │   └── ... (52 files)
+    ├── creatures/                                      # 52 Isolated Pokémon creature vector SVGs
+    │   ├── 01_ryeloaf_creature.svg
+    │   ├── ...
+    │   ├── 43_freshtin_creature.svg
+    │   └── ... (52 files)
+    └── concepts/                                       # 52 Restored hand-drawn concept sheet SVGs
+        ├── 01_ryeloaf.svg
+        ├── ...
+        ├── 43_freshtin.svg
+        └── ... (52 files)
 ```
 
 ## Vector Formats
 
-Every Pokémon concept is vectorized into three distinct SVG formats (126 vector files total):
+Every Pokémon concept is vectorized into three distinct SVG formats (156 vector files total):
 
-1. **Trading Cards (`vectors/cards/`)**: Full-color vector Pokémon trading cards styled with official type palettes (Fairy, Water, Bug, Fire, Electric, etc.), stage details, evolution chains, HP, custom attacks, and the centered creature illustration.
+1. **Trading Cards (`vectors/cards/`)**: Full-color vector Pokémon trading cards styled with official type palettes (Fairy, Water, Bug, Fire, Electric, Steel, Psychic, etc.), stage details, HP, custom attacks with damage numbers and rules text, weakness/resistance/retreat stats, and the centered creature illustration.
 2. **Creature Vectors (`vectors/creatures/`)**: Pure standalone vector paths of the creature drawing, tightly cropped and centered with proper SVG `viewBox` coordinates. Ideal for icons, sprites, stickers, print, or web assets.
-3. **Restored Concept Sheets (`vectors/concepts/`)**: Cleaned vector representations preserving the authentic hand-drawn creature illustration, handwritten name, and original evolution/type notes, with all scanner shadows, borders, spiral holes, and notepad advertising removed.
+3. **Restored Concept Sheets (`vectors/concepts/`)**: Cleaned vector representations preserving the authentic hand-drawn creature illustration, handwritten name, and original evolution/type notes, with all card template borders, background table/fabric clutter, shadows, and scanner noise removed.
 
 ## Interactive Gallery Viewer
 
@@ -46,8 +54,8 @@ open index.html
 ```
 
 - **View Modes**: Toggle between **Trading Cards**, **Creature Vectors**, and **Concept Sheets**.
-- **Type Filtering**: Filter by any of the 17 Pokémon types.
-- **Search**: Instant search across names, evolutions, and concept notes.
+- **Type Filtering**: Filter by any Pokémon type.
+- **Search**: Instant search across names, evolutions, attacks, and concept notes.
 - **Modal Inspector**: Zoom into vector curves, toggle formats, copy raw SVG XML, or download individual SVGs.
 
 ## Complete Concept Roster
@@ -96,3 +104,13 @@ open index.html
 | 40 | Clownini | Psychic | Ghost | — | — | Phantom jester apparition |
 | 41 | Potlee | Ground | Grass | Baysprout | — | Earthen pot sproutling |
 | 42 | Brufru | Fairy | Grass | Fruchew | Chuthrou | Sweet berry fruit fairy |
+| 43 | Freshtin | Steel | — | — | — | Quick-witted loaf creature with playful antennae and segmented body |
+| 44 | Tridog | Normal | — | — | — | Playful triple-eared hound with high spirits and a healthy appetite |
+| 45 | Rokoot | Steel | — | — | — | Avian automaton with high-powered laser optic and heavy spiral drill arm |
+| 46 | Squigglebug | Bug | Grass | — | — | Mischievous squiggling insect whose chaotic movements confound opponents |
+| 47 | Grallaper | Psychic | — | — | — | Geometric skeleton quadruped capable of heavy crushing stomps and staggering leaps |
+| 48 | Rangoph | Grass | Ground | — | — | Timber-chewing architect beast that constructs defensive wooden barricades |
+| 49 | Notsakiat | Electric | — | — | — | Feline static generator with an intricate conductive knot tail |
+| 50 | Ebo | Fairy | — | — | — | Whimsical tiny fairy sprite whose sneezing discharges unpredictable reversal magic |
+| 51 | Wattery | Water | — | — | — | Expressive sentient water droplet surrounded by floating auxiliary splash orbs |
+| 52 | Vibrastalk | Grass | — | — | — | Resonant flora tuning fork that vibrates to produce disorienting acoustic waves |

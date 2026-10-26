@@ -1,6 +1,7 @@
 import Foundation
 import AppKit
 import Vision
+import PDFKit
 
 // Load metadata
 let metaData = try! Data(contentsOf: URL(fileURLWithPath: "pokemon_metadata.json"))
@@ -45,10 +46,38 @@ func potrace(inputPbm: String, outputSvg: String, turdsize: Int = 10) {
     task.waitUntilExit()
 }
 
-print("Starting enhanced vector generation for 42 Pokémon concepts...")
+print("Starting enhanced vector generation for Pokémon concepts...")
+
+// Ensure pdf_preview exists for original 42 concepts
+let pdfPreviewDir = "pdf_preview"
+try? fileManager.createDirectory(atPath: pdfPreviewDir, withIntermediateDirectories: true)
+if !fileManager.fileExists(atPath: "\(pdfPreviewDir)/page_42.png") {
+    let conceptPdfPath = "Pokémon Concepts Scan Jun 23, 2020 at 7.16 PM.pdf"
+    if let doc = PDFDocument(url: URL(fileURLWithPath: conceptPdfPath)) {
+        print("Extracting \(doc.pageCount) preview pages from \(conceptPdfPath)...")
+        for i in 0..<doc.pageCount {
+            guard let page = doc.page(at: i) else { continue }
+            let pageBounds = page.bounds(for: .mediaBox)
+            let scale: CGFloat = 2.0
+            let w = Int(pageBounds.width * scale)
+            let h = Int(pageBounds.height * scale)
+            let colorSpace = CGColorSpaceCreateDeviceRGB()
+            let ctx = CGContext(data: nil, width: w, height: h, bitsPerComponent: 8, bytesPerRow: 0, space: colorSpace, bitmapInfo: CGImageAlphaInfo.premultipliedLast.rawValue)!
+            ctx.setFillColor(CGColor.white)
+            ctx.fill(CGRect(x: 0, y: 0, width: w, height: h))
+            ctx.scaleBy(x: scale, y: scale)
+            page.draw(with: .mediaBox, to: ctx)
+            let cg = ctx.makeImage()!
+            let rep = NSBitmapImageRep(cgImage: cg)
+            let png = rep.representation(using: .png, properties: [:])!
+            try? png.write(to: URL(fileURLWithPath: "\(pdfPreviewDir)/page_\(String(format: "%02d", i + 1)).png"))
+        }
+    }
+}
 
 for entry in metadataList {
     let id = entry["id"] as! Int
+    if id > 42 { continue }
     let name = entry["name"] as! String
     let primaryType = entry["primary_type"] as! String
     let secondaryType = entry["secondary_type"] as? String
@@ -426,7 +455,7 @@ for entry in metadataList {
         <text x="130" y="16" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="800" fill="#FFFFFF" text-anchor="middle">\(secondaryType!.uppercased())</text>
         """ : "")
         
-        <text x="510" y="16" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="700" fill="#757575" text-anchor="end">NO. \(idStr) / 42</text>
+        <text x="510" y="16" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="700" fill="#757575" text-anchor="end">NO. \(idStr) / \(metadataList.count)</text>
       </g>
 
       <!-- Illustration Frame -->
@@ -491,8 +520,16 @@ for entry in metadataList {
     let cardSvgPath = "vectors/cards/\(idStr)_\(safeName)_card.svg"
     try? cardSvg.write(to: URL(fileURLWithPath: cardSvgPath), atomically: true, encoding: .utf8)
     
-    print("[\(idStr)/42] Refined vector set for: \(name)")
+    print("[\(idStr)/\(metadataList.count)] Refined vector set for: \(name)")
 }
 
-print("All 42 Pokémon vector sets regenerated with morphology refinement!")
+print("Original 42 Pokémon vector sets generated successfully!")
+print("Executing homemade cards vector generation...")
+let homemadeTask = Process()
+homemadeTask.executableURL = URL(fileURLWithPath: "/usr/bin/swift")
+homemadeTask.arguments = ["generate_homemade_cards.swift"]
+try? homemadeTask.run()
+homemadeTask.waitUntilExit()
+
+print("All \(metadataList.count) Pokémon concepts fully vectorized across cards, creatures, and concepts!")
 EOF
